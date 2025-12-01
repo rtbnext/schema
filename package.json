@@ -1,0 +1,20 @@
+{
+  "name": "@rtbnext/schema",
+  "description": "Billionaires Index API schema",
+  "private": true,
+  "license": "MIT",
+  "version": "2.0.0",
+  "author": {
+    "name": "komed3 (Paul Köhler)",
+    "email": "webmaster@komed3.de",
+    "url": "https://komed3.de"
+  },
+  "homepage": "https://github.com/rtbnext/schema",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtbnext/schema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rtbnext/schema/issues"
+  }
+}
