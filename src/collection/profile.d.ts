@@ -67,7 +67,7 @@ export type Profile< P extends ProfileURI > = Utils.MetaData & {
 };
 
 export type ProfileCollection< P extends ProfileURI = ProfileURI > = {
-    index: { [ K in P ]: never };
+    index: { [ K in P ]: Utils.ProfileEntity< K > };
     alias: Record< string, P >;
     items: { [ K in P ]: Profile< K > }
 };

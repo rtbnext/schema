@@ -1,5 +1,5 @@
 import * as Const from './const';
-import { BrandedList, DateString, ISODateString, ProfileURI } from './primitives';
+import { BrandedList, BrandedProfile, DateString, ISODateString, ListURI, ProfileURI } from './primitives';
 
 export type MetaData = {
     '@metadata': {
@@ -17,12 +17,19 @@ export type MediaEntity = {
     thumb?: string;
 };
 
-export type RankingEntity = BrandedList< {
+export type ProfileEntity< P extends ProfileURI = ProfileURI > = BrandedProfile< {
+    name: string;
+    date: DateString;
+    rank?: number;
+    networth?: number;
+}, P >;
+
+export type RankingEntity< L extends ListURI = ListURI > = BrandedList< {
     date: DateString;
     rank: number;
     prev?: ProfileURI;
     next?: ProfileURI;
-} >;
+}, L >;
 
 export type RelatedEntity = {
     type: Const.Relations;
