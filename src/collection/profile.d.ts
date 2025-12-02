@@ -52,6 +52,7 @@ export type Profile< P extends ProfileURI > = Utils.MetaData & {
     bio: ProfileBio;
     history: HistoryData[];
     annual: AnnualData;
+    media: Utils.MediaEntity[];
 };
 
 export type ProfileCollection< P extends ProfileURI = ProfileURI > = {
