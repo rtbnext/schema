@@ -1,6 +1,7 @@
 import { DateString } from './abstract/primitives';
 import * as Utils from './abstract/utils';
 
+import { ListCollection } from './collection/list';
 import { ProfileCollection } from './collection/profile';
 import { Queue } from './collection/queue';
 
@@ -9,4 +10,5 @@ export type BillionairesIndex = Utils.MetaData & {
     availableDays: DateString[];
     queue: Queue;
     profile: ProfileCollection;
+    list: ListCollection;
 };

@@ -76,6 +76,12 @@ export type AssetEntity = {
     };
 };
 
+export type StatsEntity = {
+    count: number;
+    total: number;
+    woman?: number;
+};
+
 export type MapEntity = {
     lat: number;
     lon: number;
