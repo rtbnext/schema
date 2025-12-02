@@ -1,5 +1,8 @@
 import { Brand } from 'devtypes/types/base';
 
+export type DateString = `${number}-${number}-${number}`;
+export type ISODateString = `${number}-${number}-${number}T${number}:${number}:${number}Z`;
+
 export type ProfileURI = Brand< string, 'profile' >;
 export type ListURI = Brand< string, 'list' >;
 

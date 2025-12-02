@@ -1,5 +1,6 @@
 import * as Const from '../abstract/const';
-import { BrandedProfile, ProfileURI } from '../abstract/primitives';
+import { BrandedProfile, DateString, ProfileURI } from '../abstract/primitives';
+import * as Utils from '../abstract/utils';
 
 export type ProfileInfo< P extends ProfileURI > = BrandedProfile< {
     readonly uri: P;
@@ -9,7 +10,7 @@ export type ProfileInfo< P extends ProfileURI > = BrandedProfile< {
     name: string;
     shortName: string;
     gender: Const.Gender;
-    birthDate?: string;
+    birthDate?: DateString;
     birthPlace?: Location;
     citizenship: Const.ISOCountryCode;
     residence: Location;
@@ -32,8 +33,25 @@ export type ProfileInfo< P extends ProfileURI > = BrandedProfile< {
     };
 }, P >;
 
-export type Profile< P extends ProfileURI > = {
+export type ProfileBio = {
+    bio?: string[];
+    quotes?: string[];
+    facts?: string[];
+};
+
+export type HistoryData = [ DateString, number | undefined, number, number | undefined, number | undefined ];
+
+export type AnnualData = {
+    year: string;
+    networth: Utils.AnnualEntity;
+    rank: Utils.AnnualEntity;
+};
+
+export type Profile< P extends ProfileURI > = Utils.MetaData & {
     info: ProfileInfo< P >;
+    bio: ProfileBio;
+    history: HistoryData[];
+    annual: AnnualData;
 };
 
 export type ProfileCollection< P extends ProfileURI = ProfileURI > = {
