@@ -1,5 +1,5 @@
 import * as Const from './const';
-import { DateString, ISODateString } from './primitives';
+import { BrandedList, DateString, ISODateString, ProfileURI } from './primitives';
 
 export type MetaData = {
     '@metadata': {
@@ -17,7 +17,34 @@ export type MediaEntity = {
     thumb?: string;
 };
 
-export type AnnualEntity = {
+export type RankingEntity = BrandedList< {
+    date: DateString;
+    rank: number;
+    prev?: ProfileURI;
+    next?: ProfileURI;
+} >;
+
+export type RelatedEntity = {
+    type: Const.Relations;
+    name: string;
+    relation?: string;
+    uri?: ProfileURI;
+};
+
+export type RealtimeEntity = {
+    rank?: number;
+    networth: number;
+    today?: {
+        value: number;
+        pct: number;
+    };
+    ytd?: {
+        value: number;
+        pct: number;
+    };
+};
+
+export type ReportEntity = {
     first: number;
     end: number;
     diff: number;
@@ -26,4 +53,29 @@ export type AnnualEntity = {
     max: number;
     min: number;
     range: number;
+};
+
+export type AssetEntity = {
+    type: Const.AssetType;
+    value: number;
+    label?: string;
+    info?: {
+        exchange: string;
+        ticker: string;
+        shares?: number;
+        price: number;
+        currency: string;
+        exRate: number;
+    };
+};
+
+export type MapEntity = {
+    lat: number;
+    lon: number;
+    country: Const.ISOCountryCode;
+    address?: string;
+    area?: number;
+    year?: number;
+    value?: number;
+    polygon?: number[][];
 };

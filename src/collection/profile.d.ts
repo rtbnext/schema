@@ -39,19 +39,30 @@ export type ProfileBio = {
     facts?: string[];
 };
 
-export type HistoryData = [ DateString, number | undefined, number, number | undefined, number | undefined ];
+export type HistoryData = [
+    DateString,
+    number | undefined,
+    number,
+    number | undefined,
+    number | undefined
+];
 
 export type AnnualData = {
     year: string;
-    networth: Utils.AnnualEntity;
-    rank: Utils.AnnualEntity;
+    networth: Utils.ReportEntity;
+    rank: Utils.ReportEntity;
 };
 
 export type Profile< P extends ProfileURI > = Utils.MetaData & {
     info: ProfileInfo< P >;
     bio: ProfileBio;
+    related: Utils.RelatedEntity[];
+    map: Utils.MapEntity[];
+    ranking: Utils.RankingEntity[];
+    realtime: Utils.RealtimeEntity & { date: DateString };
     history: HistoryData[];
     annual: AnnualData;
+    assets: Utils.AssetEntity[];
     media: Utils.MediaEntity[];
 };
 

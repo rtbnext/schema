@@ -45,3 +45,9 @@ export type SelfMadeRank =
 
 export type ChangeFlag =
     | 'up' | 'down' | 'unchanged';
+
+export type Relations =
+    | 'person' | 'organization' | 'place' | 'unknown';
+
+export type AssetType =
+    | 'public' | 'private' | 'misc';
