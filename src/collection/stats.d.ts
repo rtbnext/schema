@@ -26,7 +26,10 @@ export type AgePyramid = {
     [ G in Const.Gender ]: StatsList< '10' | '20' | '30' | '40' | '50' | '60' | '70' | '80' | '90' >
 };
 
+export type Top10 = Record< `${number}-${number}`, Utils.ProfileEntity & { ratio?: number }[] >;
+
 export type StatsCollection = Utils.MetaData & {
+    latest: Utils.StatsEntity & { date: DateString };
     industry: Stats< Const.Industry >;
     country: Stats< Const.ISOCountryCode >;
     state: Stats< Const.USStateCode >;
@@ -37,4 +40,5 @@ export type StatsCollection = Utils.MetaData & {
         full: StatsList< `${number}` >;
         short: StatsList< 'none' | 'one' | 'two' | 'three' | 'four' | '5-to-10' | 'over-10' >;
     };
+    top10: Top10;
 };
