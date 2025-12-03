@@ -9,6 +9,7 @@ export type ProfileInfo< P extends ProfileURI > = BrandedProfile< {
     dropOff: boolean;
     name: string;
     shortName: string;
+    lastName: string;
     gender: Const.Gender;
     birthDate?: DateString;
     birthPlace?: Location;
