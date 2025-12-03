@@ -6,7 +6,7 @@ export type ListItem = Utils.RealtimeEntity & BrandedProfile< {
     name: string;
     gender: Const.Gender;
     age?: number;
-    citizenship: Const.ISOCountryCode;
+    citizenship?: Const.ISOCountryCode;
     industry: Const.Industry;
     source: string[];
 } >;
