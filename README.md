@@ -1,0 +1,1 @@
+# RTBNEXT SCHEMA
