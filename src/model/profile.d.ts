@@ -1,3 +1,4 @@
+import { TAnnual, TAsset, TRanking, TRealtime } from '../abstract/assets';
 import { TGender, TIndustry, TMaritalStatus } from '../abstract/const';
 import { TEducation, TImage, TLocation, TRelation, TWiki } from '../abstract/generic';
 
@@ -41,9 +42,9 @@ export interface TProfileData {
     };
     related: TRelation[];
     media: TImage[];
-    realtime?: Generic.TRealtime;
-    ranking: Generic.TRanking[];
-    annual: Generic.TAnnual[];
-    assets: Generic.TAsset[];
+    realtime?: TRealtime;
+    ranking: TRanking[];
+    annual: TAnnual[];
+    assets: TAsset[];
     wiki?: TWiki;
 }
