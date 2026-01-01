@@ -10,6 +10,10 @@ export type TGenericStats = TChange & {
     quota: number;
 }
 
+export type THistory = THistoryItem[];
+
+export type THistoryItem = [ string, number, number, number, number, number, number ];
+
 export type TStatsList< T extends string > = { [ K in T ]?: number };
 
 export type TProfileStats = TMetaData & {
