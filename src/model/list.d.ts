@@ -1,3 +1,4 @@
+import { TChange } from '../abstract/assets';
 import { TGender, TIndustry } from '../abstract/const';
 import { TMetaData } from '../abstract/generic';
 import { TGenericStats } from './stats';
@@ -33,11 +34,18 @@ export interface TListItem {
     gender?: TGender;
     age?: number;
     citizenship?: string;
-    industry?: TIndustry;
-    source?: string[];
 }
 
 export interface TListCollection {
     list: Record< string, TList >;
     index: TListIndex;
 }
+
+export interface TRTBListSnapshot extends TListSnapshot {
+    items: TRTBListItem[];
+}
+
+export type TRTBListItem = TListItem & TChange & {
+    industry: TIndustry;
+    source: string[];
+};
