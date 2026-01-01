@@ -17,7 +17,7 @@ export type TSelfMadeRank =
 export type TChangeFlag =
     | 'up' | 'down' | 'unchanged';
 
-export type TRelations =
+export type TRelationType =
     | 'person' | 'organization' | 'place' | 'unknown';
 
 export type TAssetType =
