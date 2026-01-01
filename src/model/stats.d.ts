@@ -10,6 +10,8 @@ export type TGenericStats = TChange & {
     quota: number;
 }
 
+export type TGlobalStats = TMetaData & TGenericStats;
+
 export type THistory = THistoryItem[];
 
 export type THistoryItem = [ string, number, number, number, number, number, number ];
@@ -85,6 +87,7 @@ export interface TScatterItem {
 }
 
 export interface TStatsCollection {
+    global: TGlobalStats;
     history: THistory;
     groups: TGroupedStats;
     profile: TProfileStats;
