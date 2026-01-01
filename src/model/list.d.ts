@@ -21,7 +21,7 @@ export type TListSnapshot = TMetaData & {
     date: string;
     items: TListItem[];
     count: number;
-}
+};
 
 export interface TListItem {
     uri: string;
@@ -33,4 +33,9 @@ export interface TListItem {
     citizenship?: string;
     industry?: TIndustry;
     source?: string[];
+}
+
+export interface TListCollection {
+    list: Record< string, TList >;
+    index: TListIndex;
 }
