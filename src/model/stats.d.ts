@@ -1,4 +1,5 @@
 import { TChange } from '../abstract/assets';
+import { TGender } from '../abstract/const';
 import { TMetaData } from '../abstract/generic';
 
 export type TGenericStats = TChange & {
@@ -13,4 +14,15 @@ export type TProfileStats = TMetaData & {}
 
 export type TWealthStats = TMetaData & {}
 
-export type TScatter = TMetaData & {}
+export type TScatter = TMetaData & {
+    items: TScatterItem[];
+    count: number;
+}
+
+export interface TScatterItem {
+    readonly uri: string;
+    name: string;
+    gender: TGender;
+    age: number;
+    networth: number;
+}
