@@ -22,3 +22,6 @@ export type TRelationType =
 
 export type TAssetType =
     | 'public' | 'private' | 'misc';
+
+export type TChildrenGroup =
+    | 'none' | 'one' | 'two' | 'three' | 'four' | '5-to-10' | 'over-10';
