@@ -1,4 +1,5 @@
 import { TChange } from '../abstract/assets';
+import { TMetaData } from '../abstract/generic';
 
 export type TGenericStats = TChange & {
     date: string;
@@ -7,3 +8,9 @@ export type TGenericStats = TChange & {
     woman: number;
     quota: number;
 }
+
+export type TProfileStats = TMetaData & {}
+
+export type TWealthStats = TMetaData & {}
+
+export type TScatter = TMetaData & {}
