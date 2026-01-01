@@ -1,5 +1,5 @@
 import { TChange } from '../abstract/assets';
-import { TChildrenGroup, TGender, TMaritalStatus } from '../abstract/const';
+import { TChildrenGroup, TGender, TMaritalStatus, TPercentiles, TWealthSpread } from '../abstract/const';
 import { TMetaData } from '../abstract/generic';
 
 export type TGenericStats = TChange & {
@@ -34,7 +34,19 @@ export interface TAgePyramidGroup {
     mean: number;
 }
 
-export type TWealthStats = TMetaData & {}
+export type TWealthStats = TMetaData & {
+    percentiles: TStatsList< TPercentiles >;
+    quartiles: [ number, number, number ];
+    total: number;
+    max: number;
+    min: number;
+    mean: number;
+    median: number;
+    stdDev: number;
+    decades: TStatsList< string >;
+    gender: TStatsList< TGender >;
+    spread: TStatsList< TWealthSpread >;
+}
 
 export type TScatter = TMetaData & {
     items: TScatterItem[];
