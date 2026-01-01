@@ -1,3 +1,4 @@
+import { TGender, TIndustry } from '../abstract/const';
 import { TMetaData } from '../abstract/generic';
 
 export type TListIndex = Map< string, TListIndexItem >;
@@ -18,6 +19,18 @@ export type TList = Record< string, TListSnapshot >;
 
 export type TListSnapshot = TMetaData & {
     date: string;
-    stats: TListStats;
     items: TListItem[];
+    count: number;
+}
+
+export interface TListItem {
+    uri: string;
+    name: string;
+    rank: number;
+    networth: number;
+    gender?: TGender;
+    age?: number;
+    citizenship?: string;
+    industry?: TIndustry;
+    source?: string[];
 }
