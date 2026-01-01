@@ -10,7 +10,7 @@ export interface TFilter {
 export type TFilterList = TMetaData & {
     items: TFilter[];
     count: number;
-};
+}
 
 export interface TFilterCollection {
     industry: Record< string, TFilter[] >;

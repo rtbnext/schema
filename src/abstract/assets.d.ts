@@ -36,7 +36,7 @@ export type TRanking = TRankingItem & {
     list: string;
     name: string;
     history?: TRankingItem[];
-};
+}
 
 export type TRealtime = TRankingItem & TChange;
 

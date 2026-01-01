@@ -24,7 +24,7 @@ export type TListSnapshot = TMetaData & {
     items: TListItem[];
     count: number;
     stats: TGenericStats;
-};
+}
 
 export interface TListItem {
     uri: string;
@@ -48,4 +48,4 @@ export interface TRTBListSnapshot extends TListSnapshot {
 export type TRTBListItem = TListItem & TChange & {
     industry: TIndustry;
     source: string[];
-};
+}

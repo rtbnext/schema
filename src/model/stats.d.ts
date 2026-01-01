@@ -6,4 +6,4 @@ export type TGenericStats = TChange & {
     total: number;
     woman: number;
     quota: number;
-};
+}

@@ -20,4 +20,4 @@ export type TMover = TMetaData & {
     date: string;
     today: TMoverItem;
     ytd: TMoverItem;
-};
+}

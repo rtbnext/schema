@@ -67,4 +67,4 @@ export type TProfileHistory = TProfileHistoryItem[];
 export type TProfile = TMetaData & {
     profile: TProfileData;
     history: TProfileHistory;
-};
+}
