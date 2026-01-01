@@ -24,13 +24,15 @@ export type TProfileStats = TMetaData & {
     philanthropyScore: TStatsList< string >;
 }
 
-export type TAgePyramid = Record< TGender, {
-    decades: TStatsList< string >;
+export type TAgePyramid = Record< TGender, TAgePyramidGroup >;
+
+export interface TAgePyramidGroup {
     count: number;
+    decades: TStatsList< string >;
     max: number;
     min: number;
     mean: number;
-} >;
+}
 
 export type TWealthStats = TMetaData & {}
 
