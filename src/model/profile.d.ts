@@ -1,4 +1,5 @@
 import { TGender, TIndustry, TMaritalStatus } from '../abstract/const';
+import { TEducation, TImage, TLocation, TRelation } from '../abstract/generic';
 
 export interface TProfileData {
     uri: string;
@@ -14,12 +15,12 @@ export interface TProfileData {
         firstName: string;
         gender: TGender;
         birthDate?: string;
-        birthPlace?: Generic.TLocation;
+        birthPlace?: TLocation;
         citizenship?: string;
-        residence?: Generic.TLocation;
+        residence?: TLocation;
         maritalStatus?: TMaritalStatus;
         children?: number;
-        education?: Generic.TEducation[];
+        education?: TEducation[];
         industry: TIndustry;
         source: string[];
         selfMade: {
@@ -38,9 +39,8 @@ export interface TProfileData {
         facts: string[];
         quotes: string[];
     };
-    related: Generic.TRelation[];
-    media: Generic.TImage[];
-    map: Generic.TMap[];
+    related: TRelation[];
+    media: TImage[];
     realtime?: Generic.TRealtime;
     ranking: Generic.TRanking[];
     annual: Generic.TAnnual[];
