@@ -10,7 +10,17 @@ export type TGenericStats = TChange & {
     quota: number;
 }
 
+export type TStatsList< T extends string > = { [ K in T ]?: number };
+
 export type TProfileStats = TMetaData & {}
+
+export type TAgePyramid = Record< TGender, {
+    decades: TStatsList< string >;
+    count: number;
+    max: number;
+    min: number;
+    mean: number;
+} >;
 
 export type TWealthStats = TMetaData & {}
 
