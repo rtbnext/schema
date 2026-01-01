@@ -1,5 +1,5 @@
 import { TChange } from '../abstract/assets';
-import { TGender } from '../abstract/const';
+import { TChildrenGroup, TGender, TMaritalStatus } from '../abstract/const';
 import { TMetaData } from '../abstract/generic';
 
 export type TGenericStats = TChange & {
@@ -12,7 +12,17 @@ export type TGenericStats = TChange & {
 
 export type TStatsList< T extends string > = { [ K in T ]?: number };
 
-export type TProfileStats = TMetaData & {}
+export type TProfileStats = TMetaData & {
+    gender: TStatsList< TGender >;
+    maritalStatus: TStatsList< TMaritalStatus >;
+    agePyramid: TAgePyramid;
+    children: {
+        full: TStatsList< string >;
+        short: TStatsList< TChildrenGroup >;
+    };
+    selfMade: TStatsList< string >;
+    philanthropyScore: TStatsList< string >;
+}
 
 export type TAgePyramid = Record< TGender, {
     decades: TStatsList< string >;
