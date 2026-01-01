@@ -34,3 +34,16 @@ export interface TImage {
     desc?: string;
     date?: string;
 }
+
+export interface TWiki {
+    uri: string;
+    pageId: number;
+    refId: number;
+    name: string;
+    lastModified: string;
+    summary: string[];
+    sortKey?: string;
+    wikidata?: string;
+    desc?: string;
+    image?: TImage;
+}

@@ -1,5 +1,5 @@
 import { TGender, TIndustry, TMaritalStatus } from '../abstract/const';
-import { TEducation, TImage, TLocation, TRelation } from '../abstract/generic';
+import { TEducation, TImage, TLocation, TRelation, TWiki } from '../abstract/generic';
 
 export interface TProfileData {
     uri: string;
@@ -45,5 +45,5 @@ export interface TProfileData {
     ranking: Generic.TRanking[];
     annual: Generic.TAnnual[];
     assets: Generic.TAsset[];
-    wiki?: Generic.TWiki;
+    wiki?: TWiki;
 }
