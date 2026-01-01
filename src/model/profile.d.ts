@@ -2,6 +2,17 @@ import { TAnnual, TAsset, TRanking, TRealtime } from '../abstract/assets';
 import { TGender, TIndustry, TMaritalStatus } from '../abstract/const';
 import { TEducation, TImage, TLocation, TRelation, TWiki } from '../abstract/generic';
 
+export type TProfileIndex = Map< string, TProfileIndexItem >;
+
+export interface TProfileIndexItem {
+    readonly uri: string;
+    aliases: string[];
+    name: string;
+    text: string;
+    image?: string;
+    desc?: string;
+}
+
 export interface TProfileData {
     uri: string;
     id: string;
