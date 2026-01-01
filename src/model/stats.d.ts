@@ -1,5 +1,5 @@
 import { TChange } from '../abstract/assets';
-import { TChildrenGroup, TGender, TMaritalStatus, TPercentiles, TWealthSpread } from '../abstract/const';
+import { TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentiles, TWealthSpread } from '../abstract/const';
 import { TMetaData } from '../abstract/generic';
 
 export type TGenericStats = TChange & {
@@ -13,6 +13,25 @@ export type TGenericStats = TChange & {
 export type THistory = THistoryItem[];
 
 export type THistoryItem = [ string, number, number, number, number, number, number ];
+
+export interface TGroupedStats {
+    industry: TStatsGroup< TIndustry >;
+    citizenship: TStatsGroup< string >;
+}
+
+export interface TStatsGroup< T extends string > {
+    index: TMetaData & { [ K in T ]: TStatsGroupItem };
+    history: { [ K in T ]: THistory };
+}
+
+export type TStatsGroupItem = TGenericStats & {
+    first: {
+        readonly uri: string;
+        name: string;
+        rank: number;
+        networth: number;
+    };
+}
 
 export type TStatsList< T extends string > = { [ K in T ]?: number };
 
@@ -63,4 +82,12 @@ export interface TScatterItem {
     gender: TGender;
     age: number;
     networth: number;
+}
+
+export interface TStatsCollection {
+    history: THistory;
+    groups: TGroupedStats;
+    profile: TProfileStats;
+    wealth: TWealthStats;
+    scatter: TScatter;
 }
