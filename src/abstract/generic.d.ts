@@ -39,6 +39,7 @@ export interface TWiki {
     uri: string;
     pageId: number;
     refId: number;
+    confidence: number;
     name: string;
     lastModified: string;
     summary: string[];
