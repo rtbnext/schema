@@ -1,5 +1,6 @@
 import { TGender, TIndustry } from '../abstract/const';
 import { TMetaData } from '../abstract/generic';
+import { TGenericStats } from './stats';
 
 export type TListIndex = Map< string, TListIndexItem >;
 
@@ -21,6 +22,7 @@ export type TListSnapshot = TMetaData & {
     date: string;
     items: TListItem[];
     count: number;
+    stats: TGenericStats;
 };
 
 export interface TListItem {
