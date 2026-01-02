@@ -1,1 +1,1 @@
-# RTBNEXT SCHEMA
+# @rtbnext Database & API Schema
