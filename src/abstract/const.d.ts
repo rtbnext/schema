@@ -1,6 +1,6 @@
 export type TIndustry =
-    | 'automotive' | 'casinos' | 'diversified' | 'energy' | 'engineering'
-    | 'finance' | 'foodstuff' | 'healthcare' | 'logistics' | 'manufacturing'
+    | 'automotive' | 'diversified' | 'energy' | 'engineering' | 'finance'
+    | 'foodstuff' | 'gambling' | 'healthcare' | 'logistics' | 'manufacturing'
     | 'media' | 'mining' | 'property' | 'retail' | 'service' | 'sports'
     | 'technology' | 'telecom';
 
