@@ -23,6 +23,13 @@ export type TRelationType =
 export type TAssetType =
     | 'public' | 'private' | 'misc';
 
+export type TFilterGroup =
+    | 'industry' | 'citizenship' | 'country' | 'state' | 'gender'
+    | 'age' | 'maritalStatus';
+
+export type TFilterSpecial =
+    | 'deceased' | 'dropOff' | 'family' | 'selfMade';
+
 export type TChildrenGroup =
     | 'none' | 'one' | 'two' | 'three' | 'four' | '5-to-10' | 'over-10';
 
@@ -31,3 +38,6 @@ export type TPercentiles =
 
 export type TWealthSpread =
     | '1' | '2' | '5' | '10' | '20' | '50' | '100' | '200' | '500';
+
+export type TStatsGroup =
+    | 'industry' | 'citizenship';
