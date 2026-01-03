@@ -10,7 +10,12 @@ export type TGenericStats = TChange & {
     quota: number;
 }
 
-export type TGlobalStats = TMetaData & TGenericStats;
+export type TGlobalStats = TMetaData & TGenericStats & {
+    stats: {
+        profiles: number;
+        days: number;
+    };
+};
 
 export type THistory = THistoryItem[];
 
