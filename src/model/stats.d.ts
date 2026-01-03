@@ -15,7 +15,12 @@ export type TGlobalStats = TMetaData & TGenericStats & {
         profiles: number;
         days: number;
     };
-};
+}
+
+export type TDBStats = TMetaData & {
+    files: number;
+    size: number;
+}
 
 export type THistory = THistoryItem[];
 
