@@ -1,17 +1,14 @@
 import { TChange } from '../abstract/assets';
 import { TGender, TIndustry } from '../abstract/const';
-import { TMetaData } from '../abstract/generic';
+import { TIndex, TMetaData } from '../abstract/generic';
 import { TGenericStats } from './stats';
 
 export type TListIndex = Map< string, TListIndexItem >;
 
-export interface TListIndexItem {
-    readonly uri: string;
-    name: string;
+export type TListIndexItem = TIndex & {
     shortName: string;
     desc: string;
     date: string;
-    text: string;
     count: number;
     columns: string[];
     filters: string[];

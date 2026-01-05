@@ -1,14 +1,11 @@
 import { TAnnual, TAsset, TRanking, TRealtime } from '../abstract/assets';
 import { TGender, TIndustry, TMaritalStatus } from '../abstract/const';
-import { TEducation, TImage, TLocation, TMetaData, TRelation, TWiki } from '../abstract/generic';
+import { TEducation, TImage, TIndex, TLocation, TMetaData, TRelation, TWiki } from '../abstract/generic';
 
 export type TProfileIndex = Map< string, TProfileIndexItem >;
 
-export interface TProfileIndexItem {
-    readonly uri: string;
+export type TProfileIndexItem = TIndex & {
     aliases: string[];
-    name: string;
-    text: string;
     image?: string;
     desc?: string;
 }

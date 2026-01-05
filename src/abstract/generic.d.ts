@@ -7,6 +7,12 @@ export interface TMetaData {
     };
 }
 
+export interface TIndex {
+    readonly uri: string;
+    name: string;
+    text: string;
+}
+
 export interface TLocation {
     country: string;
     state?: string;
