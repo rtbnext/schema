@@ -25,7 +25,7 @@ export type TAssetType =
 
 export type TFilterGroup =
     | 'industry' | 'citizenship' | 'country' | 'state' | 'gender'
-    | 'age' | 'maritalStatus';
+    | 'age' | 'maritalStatus' | 'special';
 
 export type TFilterSpecial =
     | 'deceased' | 'dropOff' | 'family' | 'selfMade';
