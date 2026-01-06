@@ -1,14 +1,14 @@
 import { TGender, TMaritalStatus } from '../abstract/const';
 import { TMetaData } from '../abstract/generic';
 
-export interface TFilter {
+export interface TFilterItem {
     readonly uri: string;
     name: string;
     value: unknown;
 }
 
-export type TFilterList = TMetaData & {
-    items: TFilter[];
+export type TFilter = TMetaData & {
+    items: TFilterItem[];
     count: number;
 }
 
