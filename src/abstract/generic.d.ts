@@ -13,6 +13,10 @@ export interface TIndex {
     text: string;
 }
 
+export interface TSnapshot {
+    readonly date: string;
+}
+
 export interface TLocation {
     country: string;
     state?: string;

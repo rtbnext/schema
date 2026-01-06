@@ -1,4 +1,4 @@
-import { TMetaData } from '../abstract/generic';
+import { TMetaData, TSnapshot } from '../abstract/generic';
 
 export interface TMoverEntry {
     readonly uri: string;
@@ -16,8 +16,7 @@ export interface TMoverItem {
     percent: TMoverSubject;
 }
 
-export type TMover = TMetaData & {
-    date: string;
+export type TMover = TMetaData & TSnapshot & {
     today: TMoverItem;
     ytd: TMoverItem;
 }
