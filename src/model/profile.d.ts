@@ -10,9 +10,9 @@ export type TProfileIndexItem = TIndex & {
     desc?: string;
 }
 
-export interface TProfileData {
+export type TProfileData = TMetaData & {
+    readonly id: string;
     uri: string;
-    id: string;
     info: {
         deceased: boolean;
         family: boolean;
@@ -61,7 +61,7 @@ export type TProfileHistoryItem = [ string, number, number, number, number ];
 
 export type TProfileHistory = TProfileHistoryItem[];
 
-export type TProfile = TMetaData & {
-    profile: TProfileData;
+export interface TProfile {
+    data: TProfileData;
     history: TProfileHistory;
 }
