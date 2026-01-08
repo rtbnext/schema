@@ -32,7 +32,9 @@ export interface TGroupedStats {
 }
 
 export interface TStatsGroup< T extends string > {
-    index: TMetaData & { [ K in T ]: TStatsGroupItem };
+    index: TMetaData & {
+        items: { [ K in T ]: TStatsGroupItem }
+    };
     history: { [ K in T ]: THistory };
 }
 
