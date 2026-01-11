@@ -47,9 +47,9 @@ export interface TImage {
 
 export interface TWikidata {
     qid: string;
+    confidence: number;
     article?: string;
     image?: string;
-    score: number;
 }
 
 export interface TWiki {
