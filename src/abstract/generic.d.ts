@@ -45,6 +45,13 @@ export interface TImage {
     date?: string;
 }
 
+export interface TWikidata {
+    qid: string;
+    article?: string;
+    image?: string;
+    score: number;
+}
+
 export interface TWiki {
     uri: string;
     pageId: number;
