@@ -1,5 +1,5 @@
 import { TChange } from '../abstract/assets';
-import { TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentiles, TWealthSpread } from '../abstract/const';
+import * as Const from '../abstract/const';
 import { TMetaData } from '../abstract/generic';
 
 export type TGenericStats = TChange & {
@@ -27,7 +27,7 @@ export type THistory = THistoryItem[];
 export type THistoryItem = [ string, number, number, number, number, number, number ];
 
 export interface TGroupedStats {
-    industry: TStatsGroup< TIndustry >;
+    industry: TStatsGroup< Const.TIndustry >;
     citizenship: TStatsGroup< string >;
 }
 
@@ -50,18 +50,18 @@ export type TStatsGroupItem = TGenericStats & {
 export type TStatsList< T extends string > = { [ K in T ]?: number };
 
 export type TProfileStats = TMetaData & {
-    gender: TStatsList< TGender >;
-    maritalStatus: TStatsList< TMaritalStatus >;
+    gender: TStatsList< Const.TGender >;
+    maritalStatus: TStatsList< Const.TMaritalStatus >;
     agePyramid: TAgePyramid;
     children: {
         full: TStatsList< string >;
-        short: TStatsList< TChildrenGroup >;
+        short: TStatsList< Const.TChildrenGroup >;
     };
     selfMade: TStatsList< string >;
     philanthropyScore: TStatsList< string >;
 }
 
-export type TAgePyramid = Record< TGender, TAgePyramidGroup >;
+export type TAgePyramid = Record< Const.TGender, TAgePyramidGroup >;
 
 export interface TAgePyramidGroup {
     count: number;
@@ -72,7 +72,7 @@ export interface TAgePyramidGroup {
 }
 
 export type TWealthStats = TMetaData & {
-    percentiles: TStatsList< TPercentiles >;
+    percentiles: TStatsList< Const.TPercentiles >;
     quartiles: [ number, number, number ];
     total: number;
     max: number;
@@ -81,8 +81,8 @@ export type TWealthStats = TMetaData & {
     median: number;
     stdDev: number;
     decades: TStatsList< string >;
-    gender: TStatsList< TGender >;
-    spread: TStatsList< TWealthSpread >;
+    gender: TStatsList< Const.TGender >;
+    spread: TStatsList< Const.TWealthSpread >;
 }
 
 export type TScatter = TMetaData & {
@@ -93,7 +93,7 @@ export type TScatter = TMetaData & {
 export interface TScatterItem {
     readonly uri: string;
     name: string;
-    gender: TGender;
+    gender: Const.TGender;
     age: number;
     networth: number;
 }
