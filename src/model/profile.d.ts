@@ -1,6 +1,6 @@
 import { TAnnual, TAsset, TRanking, TRealtime } from '../abstract/assets';
 import { TGender, TIndustry, TMaritalStatus } from '../abstract/const';
-import { TEducation, TImage, TIndex, TLocation, TMetaData, TRelation, TWiki } from '../abstract/generic';
+import { TEducation, TImage, TIndex, TLocation, TMetaData, TOrganization, TRelation, TSelfMade, TWiki } from '../abstract/generic';
 
 export type TProfileIndex = Map< string, TProfileIndexItem >;
 
@@ -32,16 +32,9 @@ export interface TProfileData {
         education?: TEducation[];
         industry: TIndustry;
         source: string[];
-        selfMade: {
-            type: string;
-            is: boolean;
-            rank?: number;
-        };
+        selfMade: TSelfMade;
         philanthropyScore?: number;
-        organization?: {
-            name: string;
-            title?: string;
-        };
+        organization?: TOrganization;
     };
     bio: {
         cv: string[];

@@ -28,6 +28,17 @@ export interface TEducation {
     degree?: string;
 }
 
+export interface TOrganization {
+    name: string;
+    title?: string;
+}
+
+export interface TSelfMade {
+    type: string;
+    is: boolean;
+    rank?: number;
+}
+
 export interface TRelation {
     type: TRelationType;
     name: string;
