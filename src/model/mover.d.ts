@@ -1,3 +1,4 @@
+import { TChangeItem } from '../abstract/assets';
 import { TMetaData, TSnapshot } from '../abstract/generic';
 
 export interface TMoverEntry {
@@ -12,6 +13,7 @@ export interface TMoverSubject {
 }
 
 export interface TMoverItem {
+    total: TChangeItem,
     networth: TMoverSubject;
     percent: TMoverSubject;
 }
