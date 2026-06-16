@@ -16,3 +16,6 @@ export type TRelationType =
 
 export type TAssetType =
   | 'public' | 'private' | 'misc';
+
+export type TChangeFlag =
+  | 'up' | 'down' | 'unchanged';

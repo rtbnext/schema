@@ -1,5 +1,5 @@
 import type { Expand } from 'devtypes/types/util';
-import type { TAssetType } from './const';
+import type { TAssetType, TChangeFlag } from './const';
 
 export type TAsset = {
   type: TAssetType;
@@ -68,3 +68,22 @@ export type TRealtime = Expand<
   TRankingItem &
   TChange
 >;
+
+export type TAnnualRecord = {
+  first: number;
+  last: number;
+  diff: number;
+  flag: TChangeFlag;
+  mean: number;
+  median: number;
+  max: number;
+  min: number;
+  range: number;
+  stdDev: number;
+};
+
+export type TAnnual = {
+  year: number,
+  rank?: TAnnualRecord;
+  networth?: TAnnualRecord;
+};
