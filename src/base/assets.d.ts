@@ -25,7 +25,17 @@ export type TChange = {
   ytd?: TChangeItem;
 };
 
+export type TExtrema = {
+  date: string;
+  networth: number;
+  rank?: number;
+};
+
 export type TPerformance = {
+  extrema?: {
+    high?: TExtrema;
+    low?: TExtrema;
+  };
   returns?: {
     week?: TChangeItem;
     month?: TChangeItem;
