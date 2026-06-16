@@ -1,3 +1,4 @@
+import type { Expand } from 'devtypes/types/util';
 import type { TAsset } from '../base/assets';
 import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
 import type * as Generic from '../base/generic';
@@ -50,7 +51,10 @@ export type TProfileHistoryItem = [
 
 export type TProfileHistory = TProfileHistoryItem[];
 
-export type TProfile = Generic.TMetaData & {
-  data: TProfileData;
-  history: TProfileHistory;
-};
+export type TProfile = Expand<
+  Generic.TMetaData &
+  {
+    data: TProfileData;
+    history: TProfileHistory;
+  }
+>;
