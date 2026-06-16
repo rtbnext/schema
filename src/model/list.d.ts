@@ -28,17 +28,17 @@ export type TListItem = {
   citizenship?: string;
 };
 
-export type TListSnapshot = Expand<
+export type TListSnapshot< T extends TListItem = TListItem > = Expand<
   TMetaData &
   TSnapshot &
   {
-    items: TListItem[];
+    items: T[];
     count: number;
     stats: TGenericStats;
   }
 >;
 
-export type TList = Record< string, TListSnapshot >;
+export type TList< T extends TListSnapshot = TListSnapshot > = Record< string, T >;
 
 export type TListCollection = {
   list: Record< string, TList >;
@@ -54,9 +54,4 @@ export type TRTBListItem = Expand<
   }
 >;
 
-export type TRTBListSnapshot = Expand<
-  Omit< TListSnapshot, 'items' > &
-  {
-    items: TRTBListItem[];
-  }
->;
+export type TRTBListSnapshot = TListSnapshot< TRTBListItem >;
