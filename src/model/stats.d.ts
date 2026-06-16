@@ -1,6 +1,6 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
-import type { TChildrenGroup, TGender, TIndustry, TMaritalStatus } from '../base/const';
+import type { TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentiles, TWealthSpread } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 export type TGenericStats = Expand< TChange & {
@@ -76,4 +76,18 @@ export type TProfileStats = Expand< TMetaData & {
   };
   selfMade: TStatsList< string >;
   philanthropyScore: TStatsList< string >;
+} >;
+
+export type TWealthStats = Expand< TMetaData & {
+  percentiles: TStatsList< TPercentiles >;
+  quartiles: [ number, number, number ];
+  total: number;
+  max: number;
+  min: number;
+  mean: number;
+  median: number;
+  stdDev: number;
+  decades: TStatsList< string >;
+  gender: TStatsList< TGender >;
+  spread: TStatsList< TWealthSpread >;
 } >;
