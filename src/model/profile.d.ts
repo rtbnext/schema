@@ -3,6 +3,17 @@ import type { TAnnual, TAsset, TPerformance, TRanking, TRealtime } from '../base
 import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
 import type * as Generic from '../base/generic';
 
+export type TProfileIndexItem = Expand<
+  Generic.TIndex &
+  {
+    aliases: string[];
+    desc?: string;
+    image?: string;
+  }
+>;
+
+export type TProfileIndex = Map< string, TProfileIndexItem >;
+
 export type TProfileInfo = {
   deceased: boolean;
   family: boolean;
