@@ -31,3 +31,9 @@ export type TProfileBio = {
   facts: string[];
 };
 
+export type TProfileData = {
+  readonly id: string;
+  uri: string;
+  info: TProfileInfo;
+  bio: TProfileBio;
+};
