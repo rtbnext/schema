@@ -21,3 +21,15 @@ export type TDBStats = Expand< TMetaData & {
   files: number;
   size: number;
 } >;
+
+export type THistoryItem = readonly [
+  date: string,
+  count: number,
+  total: number,
+  woman: number,
+  quota: number,
+  change: number,
+  percent: number
+];
+
+export type THistory = THistoryItem[];
