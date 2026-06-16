@@ -55,19 +55,13 @@ export type TRankingItem = {
   next?: string;
 };
 
-export type TRanking = Expand<
-  TRankingItem &
-  {
-    list: string;
-    name: string;
-    history?: TRankingItem[];
-  }
->;
+export type TRanking = Expand< TRankingItem & {
+  list: string;
+  name: string;
+  history?: TRankingItem[];
+} >;
 
-export type TRealtime = Expand<
-  TRankingItem &
-  TChange
->;
+export type TRealtime = Expand< TRankingItem & TChange >;
 
 export type TAnnualRecord = {
   first: number;

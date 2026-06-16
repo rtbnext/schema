@@ -6,14 +6,11 @@ import type {
   TOrganization, TRelation, TSelfMade, TWiki
 } from '../base/generic';
 
-export type TProfileIndexItem = Expand<
-  TIndex &
-  {
-    aliases: string[];
-    desc?: string;
-    image?: string;
-  }
->;
+export type TProfileIndexItem = Expand< TIndex & {
+  aliases: string[];
+  desc?: string;
+  image?: string;
+} >;
 
 export type TProfileIndex = Map< string, TProfileIndexItem >;
 
@@ -72,10 +69,7 @@ export type TProfileHistoryItem = [
 
 export type TProfileHistory = TProfileHistoryItem[];
 
-export type TProfile = Expand<
-  TMetaData &
-  {
-    data: TProfileData;
-    history: TProfileHistory;
-  }
->;
+export type TProfile = Expand< TMetaData & {
+  data: TProfileData;
+  history: TProfileHistory;
+} >;
