@@ -10,3 +10,6 @@ export type TGender =
 export type TMaritalStatus =
   | 'single' | 'relationship' | 'married' | 'remarried' | 'engaged'
   | 'separated' | 'divorced' | 'widowed';
+
+export type TAssetType =
+  | 'public' | 'private' | 'misc';
