@@ -1,3 +1,4 @@
+import type { TAsset } from '../base/assets';
 import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
 import type * as Generic from '../base/generic';
 
@@ -36,4 +37,5 @@ export type TProfileData = {
   uri: string;
   info: TProfileInfo;
   bio: TProfileBio;
+  assets: TAsset[];
 };
