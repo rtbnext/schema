@@ -24,3 +24,10 @@ export type TProfileInfo = {
   philanthropyScore?: number;
   organization?: Generic.TOrganization;
 };
+
+export type TProfileBio = {
+  cv: string[];
+  quotes: string[];
+  facts: string[];
+};
+
