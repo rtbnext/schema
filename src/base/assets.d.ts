@@ -25,6 +25,18 @@ export type TChange = {
   ytd?: TChangeItem;
 };
 
+export type TPerformance = {
+  returns?: {
+    week?: TChangeItem;
+    month?: TChangeItem;
+    quarter?: TChangeItem;
+    halfYear?: TChangeItem;
+    year?: TChangeItem;
+    twoYear?: TChangeItem;
+    fiveYear?: TChangeItem;
+  };
+};
+
 export type TRankingItem = {
   date: string;
   rank?: number;

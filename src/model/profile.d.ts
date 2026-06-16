@@ -1,5 +1,5 @@
 import type { Expand } from 'devtypes/types/util';
-import type { TAsset, TRanking, TRealtime } from '../base/assets';
+import type { TAsset, TPerformance, TRanking, TRealtime } from '../base/assets';
 import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
 import type * as Generic from '../base/generic';
 
@@ -41,6 +41,7 @@ export type TProfileData = {
   related: Generic.TRelation[];
   media: Generic.TImage[];
   realtime?: TRealtime;
+  performance?: TPerformance;
   ranking: TRanking[];
   annual: TAnnual[];
   assets: TAsset[];
