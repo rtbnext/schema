@@ -1,4 +1,4 @@
-import type { TRelationType } from './const';
+import type { TRelationType, TSelfMadeRank } from './const';
 
 export type TMetaData = {
   $metadata: {
@@ -37,7 +37,7 @@ export type TOrganization = {
 export type TSelfMade = {
   type: string;
   is: boolean;
-  rank?: number;
+  rank?: TSelfMadeRank;
 };
 
 export type TRelation = {
