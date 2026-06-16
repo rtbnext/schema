@@ -1,3 +1,11 @@
+export type TMetaData = {
+  $metadata: {
+    schemaVersion: 2;
+    lastModified: string;
+    lastLookup: string;
+  };
+};
+
 export type TLocation = {
   country: string;
   state?: string;
