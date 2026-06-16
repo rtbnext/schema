@@ -38,7 +38,13 @@ export type TProfileData = {
   uri: string;
   info: TProfileInfo;
   bio: TProfileBio;
+  related: Generic.TRelation[];
+  media: Generic.TImage[];
+  realtime?: TRealtime;
+  ranking: TRanking[];
+  annual: TAnnual[];
   assets: TAsset[];
+  wiki?: Generic.TWiki;
 };
 
 export type TProfileHistoryItem = [
