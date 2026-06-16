@@ -1,5 +1,5 @@
 import type { Expand } from 'devtypes/types/util';
-import type { TAsset } from '../base/assets';
+import type { TAsset, TRanking, TRealtime } from '../base/assets';
 import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
 import type * as Generic from '../base/generic';
 
