@@ -36,3 +36,10 @@ export type TListSnapshot = Expand<
     stats: TGenericStats;
   }
 >;
+
+export type TList = Record< string, TListSnapshot >;
+
+export type TListCollection = {
+  list: Record< string, TList >;
+  index: TListIndex;
+};
