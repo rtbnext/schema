@@ -1,4 +1,5 @@
-import type { TGender } from '../base/const';
+import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
+import type * as Generic from '../base/generic';
 
 export type TProfileInfo = {
   deceased: boolean;
@@ -11,4 +12,15 @@ export type TProfileInfo = {
   firstName: string;
   gender: TGender;
   birthDate?: string;
+  birthPlace?: Generic.TLocation;
+  citizenship?: string;
+  residence?: Generic.TLocation;
+  maritalStatus?: TMaritalStatus;
+  children?: number;
+  education?: Generic.TEducation[];
+  industry: TIndustry;
+  source: string[];
+  selfMade: Generic.TSelfMade;
+  philanthropyScore?: number;
+  organization?: Generic.TOrganization;
 };
