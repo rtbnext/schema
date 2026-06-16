@@ -39,3 +39,18 @@ export type TProfileData = {
   bio: TProfileBio;
   assets: TAsset[];
 };
+
+export type TProfileHistoryItem = [
+  date: string,
+  rank: number,
+  networth: number,
+  change: number,
+  percent: number
+];
+
+export type TProfileHistory = TProfileHistoryItem[];
+
+export type TProfile = Generic.TMetaData & {
+  data: TProfileData;
+  history: TProfileHistory;
+};
