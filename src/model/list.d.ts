@@ -1,6 +1,7 @@
 import type { Expand } from 'devtypes/types/util';
-import type { TGender } from '../../_old/src/abstract/const';
-import type { TIndex, TMetaData, TSnapshot } from '../../_old/src/abstract/generic';
+import type { TChange } from '../base/assets';
+import type { TGender, TIndustry } from '../base/const';
+import type { TIndex, TMetaData, TSnapshot } from '../base/generic';
 import type { TGenericStats } from './stats';
 
 export type TListIndexItem = Expand<
@@ -43,3 +44,19 @@ export type TListCollection = {
   list: Record< string, TList >;
   index: TListIndex;
 };
+
+export type TRTBListItem = Expand<
+  TListItem &
+  TChange &
+  {
+    industry: TIndustry;
+    source: string[];
+  }
+>;
+
+export type TRTBListSnapshot = Expand<
+  Omit< TListSnapshot, 'items' > &
+  {
+    items: TRTBListItem[];
+  }
+>;
