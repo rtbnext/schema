@@ -1,6 +1,7 @@
 import type { Expand } from 'devtypes/types/util';
-import type { TIndex, TMetaData, TSnapshot } from '../../_old/src/abstract/generic';
 import type { TGender } from '../../_old/src/abstract/const';
+import type { TIndex, TMetaData, TSnapshot } from '../../_old/src/abstract/generic';
+import type { TGenericStats } from './stats';
 
 export type TListIndexItem = Expand<
   TIndex &
