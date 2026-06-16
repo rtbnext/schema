@@ -1,6 +1,6 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
-import type { TIndustry } from '../base/const';
+import type { TChildrenGroup, TGender, TIndustry, TMaritalStatus } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 export type TGenericStats = Expand< TChange & {
@@ -45,9 +45,7 @@ export type TStatsGroupItem = Expand< TGenericStats & {
 } >;
 
 export type TStatsGroup< T extends string > = {
-  index: TMetaData & {
-    items: { [ K in T ]: TStatsGroupItem };
-  };
+  index: TMetaData & { items: { [ K in T ]: TStatsGroupItem } };
   history: { [ K in T ]: THistory };
 };
 
@@ -55,3 +53,17 @@ export type TGroupedStats = {
   industry: TStatsGroup< TIndustry >;
   citizenship: TStatsGroup< string >;
 };
+
+export type TStatsList< T extends string > = { [ K in T ]?: number };
+
+export type TProfileStats = Expand< TMetaData & {
+  gender: TStatsList< TGender >;
+  maritalStatus: TStatsList< TMaritalStatus >;
+  agePyramid: TAgePyramid;
+  children: {
+    full: TStatsList< string >;
+    short: TStatsList< TChildrenGroup >;
+  };
+  selfMade: TStatsList< string >;
+  philanthropyScore: TStatsList< string >;
+} >;
