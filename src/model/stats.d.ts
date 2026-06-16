@@ -56,6 +56,16 @@ export type TGroupedStats = {
 
 export type TStatsList< T extends string > = { [ K in T ]?: number };
 
+export type TAgePyramidGroup = {
+  count: number;
+  decades: TStatsList< string >;
+  max: number;
+  min: number;
+  mean: number;
+};
+
+export type TAgePyramid = Record< TGender, TAgePyramidGroup >;
+
 export type TProfileStats = Expand< TMetaData & {
   gender: TStatsList< TGender >;
   maritalStatus: TStatsList< TMaritalStatus >;
