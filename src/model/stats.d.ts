@@ -1,5 +1,6 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
+import type { TIndustry } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 export type TGenericStats = Expand< TChange & {
@@ -33,3 +34,24 @@ export type THistoryItem = readonly [
 ];
 
 export type THistory = THistoryItem[];
+
+export type TStatsGroupItem = Expand< TGenericStats & {
+  first: {
+    readonly uri: string;
+    name: string;
+    rank: number;
+    networth: number;
+  };
+} >;
+
+export type TStatsGroup< T extends string > = {
+  index: TMetaData & {
+    items: { [ K in T ]: TStatsGroupItem };
+  };
+  history: { [ K in T ]: THistory };
+};
+
+export type TGroupedStats = {
+  industry: TStatsGroup< TIndustry >;
+  citizenship: TStatsGroup< string >;
+};

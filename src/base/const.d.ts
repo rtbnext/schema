@@ -19,3 +19,6 @@ export type TAssetType =
 
 export type TChangeFlag =
   | 'up' | 'down' | 'unchanged';
+
+export type TStatsGroup =
+  | 'industry' | 'citizenship';
