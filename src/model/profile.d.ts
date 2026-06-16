@@ -1,10 +1,13 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TAnnual, TAsset, TPerformance, TRanking, TRealtime } from '../base/assets';
 import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
-import type * as Generic from '../base/generic';
+import type {
+  TEducation, TImage, TIndex, TLocation, TMetaData,
+  TOrganization, TRelation, TSelfMade, TWiki
+} from '../base/generic';
 
 export type TProfileIndexItem = Expand<
-  Generic.TIndex &
+  TIndex &
   {
     aliases: string[];
     desc?: string;
@@ -25,17 +28,17 @@ export type TProfileInfo = {
   firstName: string;
   gender: TGender;
   birthDate?: string;
-  birthPlace?: Generic.TLocation;
+  birthPlace?: TLocation;
   citizenship?: string;
-  residence?: Generic.TLocation;
+  residence?: TLocation;
   maritalStatus?: TMaritalStatus;
   children?: number;
-  education?: Generic.TEducation[];
+  education?: TEducation[];
   industry: TIndustry;
   source: string[];
-  selfMade: Generic.TSelfMade;
+  selfMade: TSelfMade;
   philanthropyScore?: number;
-  organization?: Generic.TOrganization;
+  organization?: TOrganization;
 };
 
 export type TProfileBio = {
@@ -49,14 +52,14 @@ export type TProfileData = {
   uri: string;
   info: TProfileInfo;
   bio: TProfileBio;
-  related: Generic.TRelation[];
-  media: Generic.TImage[];
+  related: TRelation[];
+  media: TImage[];
   realtime?: TRealtime;
   performance?: TPerformance;
   ranking: TRanking[];
   annual: TAnnual[];
   assets: TAsset[];
-  wiki?: Generic.TWiki;
+  wiki?: TWiki;
 };
 
 export type TProfileHistoryItem = [
@@ -70,7 +73,7 @@ export type TProfileHistoryItem = [
 export type TProfileHistory = TProfileHistoryItem[];
 
 export type TProfile = Expand<
-  Generic.TMetaData &
+  TMetaData &
   {
     data: TProfileData;
     history: TProfileHistory;
