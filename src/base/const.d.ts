@@ -11,5 +11,8 @@ export type TMaritalStatus =
   | 'single' | 'relationship' | 'married' | 'remarried' | 'engaged'
   | 'separated' | 'divorced' | 'widowed';
 
+export type TRelationType =
+  | 'person' | 'organization' | 'place' | 'unknown';
+
 export type TAssetType =
   | 'public' | 'private' | 'misc';

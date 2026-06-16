@@ -1,3 +1,5 @@
+import type { TRelationType } from './const';
+
 export type TMetaData = {
   $metadata: {
     schemaVersion: 2;
@@ -26,4 +28,35 @@ export type TSelfMade = {
   type: string;
   is: boolean;
   rank?: number;
+};
+
+export type TRelation = {
+  type: TRelationType;
+  name: string;
+  relation?: string;
+  uri?: string;
+};
+
+export type TImage = {
+  url: string;
+  credits: string;
+  file: string;
+  thumb?: string;
+  caption?: string;
+  desc?: string;
+  date?: string;
+};
+
+export type TWiki = {
+  uri: string;
+  pageId: number;
+  refId: number;
+  confidence: number;
+  name: string;
+  lastModified: string;
+  summary: string[];
+  sortKey?: string;
+  wikidata?: string;
+  desc?: string;
+  image?: TImage;
 };
