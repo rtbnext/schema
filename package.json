@@ -14,6 +14,6 @@
     "LICENSE"
   ],
   "dependencies": {
-    "devtypes": "^2.0.0"
+    "devtypes": "^2.2.0"
   }
 }
