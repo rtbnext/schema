@@ -1,6 +1,9 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
-import type { TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentiles, TWealthSpread } from '../base/const';
+import type {
+  TChildrenGroup, TGender, TIndustry, TMaritalStatus,
+  TPercentiles, TWealthSpread
+} from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 export type TGenericStats = Expand< TChange & {
@@ -91,3 +94,25 @@ export type TWealthStats = Expand< TMetaData & {
   gender: TStatsList< TGender >;
   spread: TStatsList< TWealthSpread >;
 } >;
+
+export type TScatterItem = {
+  readonly uri: string;
+  name: string;
+  gender: TGender;
+  age: number;
+  networth: number;
+};
+
+export type TScatter = Expand< TMetaData & {
+  items: TScatterItem[];
+  count: number;
+} >;
+
+export type TStatsCollection = {
+  global: TGlobalStats;
+  history: THistory;
+  groups: TGroupedStats;
+  profile: TProfileStats;
+  wealth: TWealthStats;
+  scatter: TScatter;
+};
