@@ -8,6 +8,16 @@ export type TMetaData = {
   };
 };
 
+export type TIndex = {
+  readonly uri: string;
+  name: string;
+  text: string;
+};
+
+export type TSnapshot = {
+  readonly date: string;
+};
+
 export type TLocation = {
   country: string;
   state?: string;
