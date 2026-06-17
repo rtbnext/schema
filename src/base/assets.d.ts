@@ -1,18 +1,20 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TAssetType, TChangeFlag } from './const';
 
+export type TAssetInfo = {
+  exchange: string;
+  ticker: string;
+  shares?: number;
+  price: number;
+  currency: string;
+  exRate: number;
+};
+
 export type TAsset = {
   type: TAssetType;
   label: string;
   value?: number;
-  info?: {
-    exchange: string;
-    ticker: string;
-    shares?: number;
-    price: number;
-    currency: string;
-    exRate: number;
-  };
+  info?: TAssetInfo;
 };
 
 export type TChangeItem = {
@@ -25,26 +27,30 @@ export type TChange = {
   ytd?: TChangeItem;
 };
 
-export type TExtrema = {
+export type TDataPoint = {
   date: string;
   networth: number;
   rank?: number;
 };
 
+export type TExtrema = {
+  high?: TDataPoint;
+  low?: TDataPoint;
+};
+
+export type TReturns = {
+  week?: TChangeItem;
+  month?: TChangeItem;
+  quarter?: TChangeItem;
+  halfYear?: TChangeItem;
+  year?: TChangeItem;
+  twoYear?: TChangeItem;
+  fiveYear?: TChangeItem;
+};
+
 export type TPerformance = {
-  extrema?: {
-    high?: TExtrema;
-    low?: TExtrema;
-  };
-  returns?: {
-    week?: TChangeItem;
-    month?: TChangeItem;
-    quarter?: TChangeItem;
-    halfYear?: TChangeItem;
-    year?: TChangeItem;
-    twoYear?: TChangeItem;
-    fiveYear?: TChangeItem;
-  };
+  extrema?: TExtrema;
+  returns?: TReturns;
 };
 
 export type TRankingItem = {
