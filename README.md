@@ -1,6 +1,6 @@
 # @rtbnext/schema
 
-**Internal package for defining the database schema.**
+**Internal package declaring the database schema.**
 
 This package defines the structure of the profiles and lists, as well as statistics, daily winners/losers (mover), and filtered lists.
 
