@@ -1,11 +1,11 @@
+import type { Expand } from 'devtypes/types/util';
 import type { TRelationType, TSelfMadeRank } from './const';
 
-export type TMetaData = {
-  $metadata: {
+export type TMetaData< T extends Record< string, any > = {} > = {
+  $metadata: Expand< {
     schemaVersion: 2;
     lastModified: string;
-    lastLookup: string;
-  };
+  } & T >;
 };
 
 export type TIndex = {
