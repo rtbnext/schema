@@ -1,6 +1,6 @@
 {
   "name": "@rtbnext/schema",
-  "description": "Billionaires Index API schema",
+  "description": "Internal package declaring the database schema",
   "license": "MIT",
   "version": "2.0.0-alpha.1",
   "author": {
