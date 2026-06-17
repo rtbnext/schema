@@ -14,15 +14,23 @@ export type TProfileIndexItem = Expand< TIndex & {
 
 export type TProfileIndex = Map< string, TProfileIndexItem >;
 
-export type TProfileInfo = {
+export type TProfileFlags = {
   deceased: boolean;
   family: boolean;
   dropOff: boolean;
-  embargo?: boolean;
-  name: string;
+  embargo: boolean;
+};
+
+export type TProfileName = {
+  fullName: string;
   shortName: string;
   lastName: string;
   firstName: string;
+};
+
+export type TProfileInfo = {
+  flags: TProfileFlags;
+  name: TProfileName;
   gender: TGender;
   birthDate?: string;
   birthPlace?: TLocation;
