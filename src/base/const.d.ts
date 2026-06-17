@@ -34,3 +34,10 @@ export type TPercentiles =
 
 export type TWealthSpread =
   | '1' | '2' | '5' | '10' | '20' | '50' | '100' | '200' | '500';
+
+export type TFilterGroup =
+  | 'industry' | 'citizenship' | 'country' | 'state' | 'gender'
+  | 'age' | 'maritalStatus' | 'special';
+
+export type TFilterSpecial =
+  | 'deceased' | 'dropOff' | 'family' | 'selfMade';
