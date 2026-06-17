@@ -69,7 +69,9 @@ export type TProfileHistoryItem = readonly [
 
 export type TProfileHistory = TProfileHistoryItem[];
 
-export type TProfile = Expand< TMetaData & {
+export type TProfile = Expand< TMetaData< {
+  lastLookup: string;
+} > & {
   data: TProfileData;
   history: TProfileHistory;
 } >;
