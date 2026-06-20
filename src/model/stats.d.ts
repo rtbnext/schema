@@ -28,7 +28,7 @@ export type TDBStatsData = {
 
 export type TDBStats = Expand< TMetaData & TDBStatsData >;
 
-export type THistoryItem = readonly [
+export type THistoryItem = [
   date: string,
   count: number,
   total: number,

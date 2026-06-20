@@ -65,7 +65,7 @@ export type TProfileData = {
   wiki?: TWiki;
 };
 
-export type TProfileHistoryItem = readonly [
+export type TProfileHistoryItem = [
   date: string,
   rank: number,
   networth: number,
