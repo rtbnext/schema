@@ -8,10 +8,12 @@ export type TFilterItem = {
   value: unknown;
 };
 
-export type TFilter = Expand< TMetaData & {
+export type TFilterData = {
   items: TFilterItem[];
   count: number;
-} >;
+};
+
+export type TFilter = Expand< TMetaData & TFilterData >;
 
 export type TFilterSpecialList = {
   deceased: TFilterItem[];
