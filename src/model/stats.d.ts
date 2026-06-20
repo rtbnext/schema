@@ -1,9 +1,6 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
-import type {
-  TChildrenGroup, TGender, TIndustry, TMaritalStatus,
-  TPercentiles, TWealthSpread
-} from '../base/const';
+import type { TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentiles, TWealthSpread } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 export type TGenericStats = Expand< TChange & {
@@ -14,12 +11,14 @@ export type TGenericStats = Expand< TChange & {
   quota: number;
 } >;
 
-export type TGlobalStats = Expand< TMetaData & TGenericStats & {
+export type TGlobalStatsData = Expand< TGenericStats & {
   stats: {
     profiles: number;
     days: number;
   };
 } >;
+
+export type TGlobalStats = Expand< TMetaData & TGlobalStatsData >;
 
 export type TDBStats = Expand< TMetaData & {
   files: number;
@@ -48,7 +47,7 @@ export type TStatsGroupItem = Expand< TGenericStats & {
 } >;
 
 export type TStatsGroup< T extends string > = {
-  index: TMetaData & { items: { [ K in T ]: TStatsGroupItem } };
+  index: Expand< TMetaData & { items: { [ K in T ]: TStatsGroupItem } } >;
   history: { [ K in T ]: THistory };
 };
 
@@ -69,7 +68,7 @@ export type TAgePyramidGroup = {
 
 export type TAgePyramid = Record< TGender, TAgePyramidGroup >;
 
-export type TProfileStats = Expand< TMetaData & {
+export type TProfileStatsData = {
   gender: TStatsList< TGender >;
   maritalStatus: TStatsList< TMaritalStatus >;
   agePyramid: TAgePyramid;
@@ -79,9 +78,11 @@ export type TProfileStats = Expand< TMetaData & {
   };
   selfMade: TStatsList< string >;
   philanthropyScore: TStatsList< string >;
-} >;
+};
 
-export type TWealthStats = Expand< TMetaData & {
+export type TProfileStats = Expand< TMetaData & TProfileStatsData >;
+
+export type TWealthStatsData = {
   percentiles: TStatsList< TPercentiles >;
   quartiles: [ number, number, number ];
   total: number;
@@ -93,7 +94,9 @@ export type TWealthStats = Expand< TMetaData & {
   decades: TStatsList< string >;
   gender: TStatsList< TGender >;
   spread: TStatsList< TWealthSpread >;
-} >;
+};
+
+export type TWealthStats = Expand< TMetaData & TWealthStatsData >;
 
 export type TScatterItem = {
   readonly uri: string;
@@ -103,10 +106,12 @@ export type TScatterItem = {
   networth: number;
 };
 
-export type TScatter = Expand< TMetaData & {
+export type TScatterData = {
   items: TScatterItem[];
   count: number;
-} >;
+};
+
+export type TScatter = Expand< TMetaData & TScatterData >;
 
 export type TStatsCollection = {
   global: TGlobalStats;
