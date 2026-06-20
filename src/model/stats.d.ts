@@ -21,10 +21,12 @@ export type TGlobalStatsData = Expand< TGenericStats & {
 
 export type TGlobalStats = Expand< TMetaData & TGlobalStatsData >;
 
-export type TDBStats = Expand< TMetaData & {
+export type TDBStatsData = {
   files: number;
   size: number;
-} >;
+};
+
+export type TDBStats = Expand< TMetaData & TDBStatsData >;
 
 export type THistoryItem = readonly [
   date: string,
