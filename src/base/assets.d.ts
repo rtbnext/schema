@@ -1,6 +1,7 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TAssetType, TChangeFlag } from './const';
 
+
 export type TAssetInfo = {
   exchange: string;
   ticker: string;

@@ -3,6 +3,7 @@ import type { TAnnual, TAsset, TPerformance, TRanking, TRealtime } from '../base
 import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
 import type { TEducation, TImage, TIndex, TLocation, TMetaData, TOrganization, TRelation, TSelfMade, TWiki } from '../base/generic';
 
+
 export type TProfileIndexItem = Expand< TIndex & {
   aliases: string[];
   desc?: string;

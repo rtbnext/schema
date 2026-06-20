@@ -3,6 +3,7 @@ import type { TChange } from '../base/assets';
 import type { TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentiles, TWealthSpread } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
+
 export type TGenericStats = Expand< TChange & {
   date: string;
   count: number;
@@ -47,7 +48,9 @@ export type TStatsGroupItem = Expand< TGenericStats & {
 } >;
 
 export type TStatsGroup< T extends string > = {
-  index: Expand< TMetaData & { items: { [ K in T ]: TStatsGroupItem } } >;
+  index: Expand< TMetaData & {
+    items: { [ K in T ]: TStatsGroupItem };
+  } >;
   history: { [ K in T ]: THistory };
 };
 

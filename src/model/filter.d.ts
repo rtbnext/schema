@@ -2,6 +2,7 @@ import type { Expand } from 'devtypes/types/util';
 import type { TGender, TMaritalStatus } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
+
 export type TFilterItem = {
   readonly uri: string;
   name: string;

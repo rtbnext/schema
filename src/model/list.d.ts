@@ -4,6 +4,7 @@ import type { TGender, TIndustry } from '../base/const';
 import type { TIndex, TMetaData, TSnapshot } from '../base/generic';
 import type { TGenericStats } from './stats';
 
+
 export type TListIndexItem = Expand< TIndex & {
   shortName: string;
   desc: string;
@@ -31,9 +32,7 @@ export type TListSnapshotData< T extends TListItem = TListItem > = Expand< TSnap
   stats: TGenericStats;
 } >;
 
-export type TListSnapshot< T extends TListItem = TListItem > = Expand<
-  TMetaData & TListSnapshotData< T >
->;
+export type TListSnapshot< T extends TListItem = TListItem > = Expand< TMetaData & TListSnapshotData< T > >;
 
 export type TList< T extends TListSnapshot = TListSnapshot > = Record< string, T >;
 
