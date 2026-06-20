@@ -19,7 +19,9 @@ export type TMoverItem = {
   percent: TMoverSubject;
 };
 
-export type TMover = Expand< TMetaData & TSnapshot & {
+export type TMoverData = Expand< TSnapshot & {
   today: TMoverItem;
   ytd: TMoverItem;
 } >;
+
+export type TMover = Expand< TMetaData & TMoverData >;
