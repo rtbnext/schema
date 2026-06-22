@@ -76,7 +76,7 @@ export type TProfileHistoryItem = [
 export type TProfileHistory = TProfileHistoryItem[];
 
 export type TProfileMetaData = TMetaData< {
-  lastLookup: string;
+  lastLookup?: string;
 } >;
 
 export type TProfile = Expand< TProfileMetaData & {
