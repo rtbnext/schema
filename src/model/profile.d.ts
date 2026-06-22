@@ -39,7 +39,7 @@ export type TProfileInfo = {
   education?: TEducation[];
   industry: TIndustry;
   source: string[];
-  selfMade: TSelfMade;
+  selfMade?: TSelfMade;
   philanthropyScore?: number;
   organization?: TOrganization;
 };
