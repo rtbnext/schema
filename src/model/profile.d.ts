@@ -13,10 +13,10 @@ export type TProfileIndexItem = Expand< TIndex & {
 export type TProfileIndex = Map< string, TProfileIndexItem >;
 
 export type TProfileFlags = {
-  deceased: boolean;
-  family: boolean;
-  dropOff: boolean;
-  embargo: boolean;
+  deceased?: boolean;
+  family?: boolean;
+  dropOff?: boolean;
+  embargo?: boolean;
 };
 
 export type TProfileName = {
