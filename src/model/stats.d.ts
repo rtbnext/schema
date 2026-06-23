@@ -130,7 +130,7 @@ export type TTop10List = TTop10Item[];
 export type TTop10Data = Record< string, TTop10List >;
 
 export type TTop10 = Expand< TMetaData & {
-  list: TTop10Data;
+  entries: TTop10Data;
 } >;
 
 export type TStatsCollection = {
