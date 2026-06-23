@@ -3,26 +3,26 @@ import type { TChangeItem } from '../base/assets';
 import type { TMetaData, TSnapshot } from '../base/generic';
 
 
-export type TMoverEntry = {
+export type TMoverItem = {
   readonly uri: string;
   name: string;
   value: number;
 };
 
-export type TMoverSubject = {
-  winner: TMoverEntry[];
-  loser: TMoverEntry[];
+export type TMoverEntry = {
+  winner: TMoverItem[];
+  loser: TMoverItem[];
 };
 
-export type TMoverItem = {
+export type TMoverBucket = {
   total: TChangeItem,
-  networth: TMoverSubject;
-  percent: TMoverSubject;
+  networth: TMoverEntry;
+  percent: TMoverEntry;
 };
 
 export type TMoverData = Expand< TSnapshot & {
-  today: TMoverItem;
-  ytd: TMoverItem;
+  today: TMoverBucket;
+  ytd: TMoverBucket;
 } >;
 
 export type TMover = Expand< TMetaData & TMoverData >;
