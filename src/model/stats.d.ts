@@ -1,6 +1,6 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
-import type { TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentiles, TWealthSpread } from '../base/const';
+import type { TChangeFlag, TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentiles, TWealthSpread } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 
@@ -118,11 +118,27 @@ export type TScatterData = {
 
 export type TScatter = Expand< TMetaData & TScatterData >;
 
+export type TTop10Item = {
+  readonly uri: string;
+  rank: number;
+  networth: number;
+  flag: TChangeFlag;
+};
+
+export type TTop10List = TTop10Item[];
+
+export type TTop10Data = Record< string, TTop10List >;
+
+export type TTop10 = Expand< TMetaData & {
+  list: TTop10Data;
+} >;
+
 export type TStatsCollection = {
   global: TGlobalStats;
   history: THistory;
   groups: TGroupedStats;
   profile: TProfileStats;
-  wealth: TWealthStats;
   scatter: TScatter;
+  top10: TTop10;
+  wealth: TWealthStats;
 };
