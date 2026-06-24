@@ -2,7 +2,7 @@
   "name": "@rtbnext/schema",
   "description": "Internal package declaring the database schema",
   "license": "MIT",
-  "version": "2.0.0-alpha.12",
+  "version": "2.0.0-alpha.13",
   "author": {
     "name": "komed3 (Paul Köhler)",
     "email": "webmaster@komed3.de",
