@@ -21,7 +21,7 @@ export type TAssetType =
   | 'public' | 'private' | 'misc';
 
 export type TChangeFlag =
-  | 'up' | 'down' | 'unchanged' | 'new' | 'returned' | 'unknown';
+  | 'up' | 'down' | 'unchanged' | 'new' | 'returned' | 'dropoff' | 'unknown';
 
 export type TStatsGroup =
   | 'industry' | 'citizenship';
