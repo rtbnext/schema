@@ -53,6 +53,7 @@ export type TProfileBio = {
 export type TProfileData = {
   readonly id: string;
   uri: string;
+  aliases: string[];
   info: TProfileInfo;
   bio: TProfileBio;
   related: TRelation[];
