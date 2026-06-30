@@ -31,6 +31,7 @@ export type TProfileInfo = {
   name: TProfileName;
   gender: TGender;
   birthDate?: string;
+  deathDate?: string;
   birthPlace?: TLocation;
   citizenship?: string;
   residence?: TLocation;
@@ -53,7 +54,6 @@ export type TProfileBio = {
 export type TProfileData = {
   readonly id: string;
   uri: string;
-  aliases: string[];
   info: TProfileInfo;
   bio: TProfileBio;
   related: TRelation[];
