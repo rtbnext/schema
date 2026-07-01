@@ -22,17 +22,6 @@ export type TListItem = {
   rank: number;
 };
 
-export type TPersonListItem = Expand< TListItem & {
-  networth: number;
-  industry: TIndustry;
-  source: string[];
-  gender?: TGender;
-  age?: number;
-  citizenship?: string;
-  selfMadeRank?: number;
-  philanthropyScore?: number;
-} >;
-
 export type TListSnapshotData< T extends TListItem = TListItem > = Expand< TSnapshot & {
   items: T[];
   count: number;
@@ -47,6 +36,17 @@ export type TListCollection = {
   list: Record< string, TList >;
   index: TListIndex;
 };
+
+export type TPersonListItem = Expand< TListItem & {
+  networth: number;
+  industry: TIndustry;
+  source: string[];
+  gender?: TGender;
+  age?: number;
+  citizenship?: string;
+  selfMadeRank?: number;
+  philanthropyScore?: number;
+} >;
 
 export type TRTBListItem = Expand< TPersonListItem & TChange & {
   flag: TChangeFlag;
