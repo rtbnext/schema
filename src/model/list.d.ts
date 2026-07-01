@@ -44,13 +44,16 @@ export type TPersonListItem = Expand< TListItem & {
   gender?: TGender;
   age?: number;
   citizenship?: string;
-  selfMadeRank?: TSelfMadeRank;
-  philanthropyScore?: number;
 } >;
 
 export type TRTBListItem = Expand< TPersonListItem & TChange & {
   flag: TChangeFlag;
   rankDiff?: number;
+} >;
+
+export type T400ListItem = Expand< TPersonListItem & {
+  selfMadeRank: TSelfMadeRank;
+  philanthropyScore: number;
 } >;
 
 export type TRTBListSnapshot = TListSnapshot< TRTBListItem >;
