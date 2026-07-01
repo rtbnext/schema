@@ -36,7 +36,7 @@ export type TOrganization = {
 };
 
 export type TSelfMade = {
-  type: string;
+  type?: string;
   is: boolean;
   rank?: TSelfMadeRank;
 };
