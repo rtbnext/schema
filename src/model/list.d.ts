@@ -8,8 +8,6 @@ import type { TGenericStats } from './stats';
 export type TListIndexItem = Expand< TIndex & {
   shortName: string;
   desc: string;
-  date: string;
-  count: number;
   columns: string[];
   filters: string[];
 } >;
