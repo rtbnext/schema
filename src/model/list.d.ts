@@ -1,6 +1,6 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
-import type { TChangeFlag, TGender, TIndustry } from '../base/const';
+import type { TChangeFlag, TGender, TIndustry, TSelfMadeRank } from '../base/const';
 import type { TIndex, TMetaData, TSnapshot } from '../base/generic';
 import type { TGenericStats } from './stats';
 
@@ -44,7 +44,7 @@ export type TPersonListItem = Expand< TListItem & {
   gender?: TGender;
   age?: number;
   citizenship?: string;
-  selfMadeRank?: number;
+  selfMadeRank?: TSelfMadeRank;
   philanthropyScore?: number;
 } >;
 
