@@ -35,14 +35,6 @@ export type TOrganization = {
   title?: string;
 };
 
-export type TEmployment = {
-  name: string;
-  title?: string;
-  earningEst?: number;
-  salaryEst?: number;
-  government: boolean;
-};
-
 export type TSelfMade = {
   type?: string;
   is: boolean;

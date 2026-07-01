@@ -1,7 +1,7 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TAnnual, TAsset, TPerformance, TRanking, TRealtime } from '../base/assets';
 import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
-import type { TEducation, TEmployment, TImage, TIndex, TLocation, TMetaData, TOrganization, TRelation, TSelfMade, TWiki } from '../base/generic';
+import type { TEducation, TImage, TIndex, TLocation, TMetaData, TOrganization, TRelation, TSelfMade, TWiki } from '../base/generic';
 
 
 export type TProfileIndexItem = Expand< TIndex & {
@@ -43,7 +43,6 @@ export type TProfileInfo = {
   selfMade?: TSelfMade;
   philanthropyScore?: number;
   organization?: TOrganization;
-  employment?: TEmployment;
 };
 
 export type TProfileBio = {
