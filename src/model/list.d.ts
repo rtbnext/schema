@@ -51,9 +51,11 @@ export type TRTBListItem = Expand< TPersonListItem & TChange & {
   rankDiff?: number;
 } >;
 
-export type T400ListItem = Expand< TPersonListItem & {
+export type TBillionairesListItem = Expand< TPersonListItem & {
   selfMadeRank: TSelfMadeRank;
   philanthropyScore: number;
 } >;
+
+export type T400ListItem = TBillionairesListItem;
 
 export type TRTBListSnapshot = TListSnapshot< TRTBListItem >;
