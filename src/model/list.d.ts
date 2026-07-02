@@ -50,8 +50,8 @@ export type TRTBListItem = Expand< TPersonListItem & TChange & {
 } >;
 
 export type TBillionairesListItem = Expand< TPersonListItem & {
-  selfMadeRank: TSelfMadeRank;
-  philanthropyScore: number;
+  selfMadeRank?: TSelfMadeRank;
+  philanthropyScore?: number;
 } >;
 
 export type T400ListItem = TBillionairesListItem;
