@@ -1,3 +1,11 @@
+/**
+ * RTBNext Schema
+ * 
+ * Shared constant type definitions used throughout the RTBNext schema.
+ * These string literal unions define fixed value sets for schema fields
+ * and ensure consistency across all packages.
+ */
+
 export type TIndustry =
   | 'automotive' | 'diversified' | 'energy' | 'engineering' | 'finance'
   | 'foodstuff' | 'gambling' | 'healthcare' | 'logistics' | 'manufacturing'
