@@ -95,6 +95,9 @@ export type TProfileData = {
   wiki?: TWiki;
 };
 
+/**
+ * Historical profile record.
+ */
 export type TProfileHistoryItem = [
   date: string,
   rank: number,
@@ -103,12 +106,21 @@ export type TProfileHistoryItem = [
   percent: number
 ];
 
+/**
+ * Historical profile data.
+ */
 export type TProfileHistory = TProfileHistoryItem[];
 
+/**
+ * Profile document metadata.
+ */
 export type TProfileMetaData = TMetaData< {
   lastLookup?: string;
 } >;
 
+/**
+ * Complete profile document.
+ */
 export type TProfile = Expand< TProfileMetaData & {
   data: TProfileData;
   history: TProfileHistory;
