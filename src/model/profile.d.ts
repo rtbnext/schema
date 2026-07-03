@@ -13,14 +13,23 @@ import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
 import type { TEducation, TImage, TIndex, TLocation, TMetaData, TOrganization, TRelation, TSelfMade, TWiki } from '../base/generic';
 
 
+/**
+ * Profile search index entry.
+ */
 export type TProfileIndexItem = Expand< TIndex & {
   aliases: string[];
   desc?: string;
   image?: string;
 } >;
 
+/**
+ * Profile search index.
+ */
 export type TProfileIndex = Map< string, TProfileIndexItem >;
 
+/**
+ * Profile status flags.
+ */
 export type TProfileFlags = {
   deceased?: boolean;
   family?: boolean;
@@ -28,6 +37,9 @@ export type TProfileFlags = {
   embargo?: boolean;
 };
 
+/**
+ * Person name information.
+ */
 export type TProfileName = {
   fullName: string;
   shortName: string;
@@ -35,6 +47,9 @@ export type TProfileName = {
   firstName: string;
 };
 
+/**
+ * General profile information.
+ */
 export type TProfileInfo = {
   flags: TProfileFlags;
   name: TProfileName;
@@ -53,12 +68,18 @@ export type TProfileInfo = {
   organization?: TOrganization;
 };
 
+/**
+ * Biographical profile content.
+ */
 export type TProfileBio = {
   cv: string[];
   quotes: string[];
   facts: string[];
 };
 
+/**
+ * Complete profile data.
+ */
 export type TProfileData = {
   readonly id: string;
   uri: string;
