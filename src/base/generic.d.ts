@@ -11,6 +11,11 @@ import type { Expand } from 'devtypes/types/util';
 import type { TRelationType, TSelfMadeRank } from './const';
 
 
+/**
+ * Base metadata attached to every schema document.
+ * 
+ * @template T Additional metadata fields.
+ */
 export type TMetaData< T extends Record< string, unknown > = {} > = {
   $metadata: Expand< {
     schemaVersion: 2;
@@ -18,12 +23,18 @@ export type TMetaData< T extends Record< string, unknown > = {} > = {
   } & T >;
 };
 
+/**
+ * Search index entry.
+ */
 export type TIndex = {
   readonly uri: string;
   name: string;
   text: string;
 };
 
+/**
+ * Snapshot reference.
+ */
 export type TSnapshot = {
   readonly date: string;
 };
