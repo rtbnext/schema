@@ -1,3 +1,11 @@
+/**
+ * RTBNext Schema V2
+ * Stats
+ * 
+ * Type definitions for statistical data, grouped statistics,
+ * historical trends, demographic distributions, and wealth analysis.
+ */
+
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
 import type { TChangeFlag, TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentile, TWealthSpread } from '../base/const';
