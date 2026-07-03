@@ -1,21 +1,41 @@
+/**
+ * RTBNext Schema V2
+ * Filter
+ * 
+ * Type definitions for filter entries, filter documents,
+ * and filter collections.
+ */
+
 import type { Expand } from 'devtypes/types/util';
 import type { TGender, TMaritalStatus } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 
+/**
+ * Filter entry.
+ */
 export type TFilterItem = {
   readonly uri: string;
   name: string;
   value: unknown;
 };
 
+/**
+ * Filter data.
+ */
 export type TFilterData = {
   items: TFilterItem[];
   count: number;
 };
 
+/**
+ * Filter document.
+ */
 export type TFilter = Expand< TMetaData & TFilterData >;
 
+/**
+ * Special filter lists.
+ */
 export type TFilterSpecialList = {
   deceased: TFilterItem[];
   dropOff: TFilterItem[];
@@ -23,6 +43,9 @@ export type TFilterSpecialList = {
   selfMade: TFilterItem[];
 };
 
+/**
+ * Collection of filter lists.
+ */
 export type TFilterList = {
   industry: Record< string, TFilterItem[] >;
   citizenship: Record< string, TFilterItem[] >;
@@ -34,6 +57,9 @@ export type TFilterList = {
   special: TFilterSpecialList;
 };
 
+/**
+ * Collection of special filter documents.
+ */
 export type TFilterSpecialCollection = {
   deceased: TFilter;
   dropOff: TFilter;
@@ -41,6 +67,9 @@ export type TFilterSpecialCollection = {
   selfMade: TFilter;
 };
 
+/**
+ * Collection of filter documents.
+ */
 export type TFilterCollection = {
   industry: Record< string, TFilter >;
   citizenship: Record< string, TFilter >;
