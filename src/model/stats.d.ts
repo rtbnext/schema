@@ -93,13 +93,24 @@ export type TStatsGroup< T extends string > = {
   history: { [ K in T ]: THistory };
 };
 
+/**
+ * Collection of grouped statistics.
+ */
 export type TGroupedStats = {
   industry: TStatsGroup< TIndustry >;
   citizenship: TStatsGroup< string >;
 };
 
+/**
+ * Generic statistical value list.
+ * 
+ * @template T Category key type.
+ */
 export type TStatsList< T extends string > = { [ K in T ]?: number };
 
+/**
+ * Age pyramid statistics for a demographic group.
+ */
 export type TAgePyramidGroup = {
   count: number;
   decades: TStatsList< string >;
@@ -108,8 +119,14 @@ export type TAgePyramidGroup = {
   mean: number;
 };
 
+/**
+ * Age pyramid statistics.
+ */
 export type TAgePyramid = Record< TGender, TAgePyramidGroup >;
 
+/**
+ * Demographic profile statistics.
+ */
 export type TProfileStatsData = {
   gender: TStatsList< TGender >;
   maritalStatus: TStatsList< TMaritalStatus >;
@@ -122,8 +139,14 @@ export type TProfileStatsData = {
   philanthropyScore: TStatsList< string >;
 };
 
+/**
+ * Demographic profile statistics document.
+ */
 export type TProfileStats = Expand< TMetaData & TProfileStatsData >;
 
+/**
+ * Wealth distribution statistics.
+ */
 export type TWealthStatsData = {
   percentiles: TStatsList< TPercentile >;
   quartiles: [ number, number, number ];
@@ -138,8 +161,14 @@ export type TWealthStatsData = {
   spread: TStatsList< TWealthSpread >;
 };
 
+/**
+ * Wealth statistics document.
+ */
 export type TWealthStats = Expand< TMetaData & TWealthStatsData >;
 
+/**
+ * Scatter plot entry.
+ */
 export type TScatterItem = {
   readonly uri: string;
   name: string;
@@ -148,13 +177,22 @@ export type TScatterItem = {
   networth: number;
 };
 
+/**
+ * Scatter plot data.
+ */
 export type TScatterData = {
   items: TScatterItem[];
   count: number;
 };
 
+/**
+ * Scatter plot document.
+ */
 export type TScatter = Expand< TMetaData & TScatterData >;
 
+/**
+ * Top 10 ranking entry.
+ */
 export type TTop10Item = {
   readonly uri: string;
   rank: number;
@@ -162,14 +200,26 @@ export type TTop10Item = {
   flag: TChangeFlag;
 };
 
+/**
+ * Top 10 ranking list.
+ */
 export type TTop10List = TTop10Item[];
 
+/**
+ * Collection of Top 10 ranking lists.
+ */
 export type TTop10Data = Record< string, TTop10List >;
 
+/**
+ * Top 10 ranking document.
+ */
 export type TTop10 = Expand< TMetaData & {
   entries: TTop10Data;
 } >;
 
+/**
+ * Collection of statistical documents.
+ */
 export type TStatsCollection = {
   global: TGlobalStats;
   history: THistory;
