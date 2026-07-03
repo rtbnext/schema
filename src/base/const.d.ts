@@ -6,22 +6,41 @@
  * and ensure consistency across all packages.
  */
 
+/**
+ * Supported business sectors.
+ */
 export type TIndustry =
   | 'automotive' | 'diversified' | 'energy' | 'engineering' | 'finance'
   | 'foodstuff' | 'gambling' | 'healthcare' | 'logistics' | 'manufacturing'
   | 'media' | 'mining' | 'property' | 'retail' | 'service' | 'sports'
   | 'technology' | 'telecom';
 
+/**
+ * Supported gender values.
+ * 
+ * d = diverse
+ * m = male
+ * f = female
+ */
 export type TGender =
   | 'm' | 'f' | 'd';
 
+/**
+ * Supported marital status values.
+ */
 export type TMaritalStatus =
   | 'single' | 'relationship' | 'married' | 'remarried' | 'engaged'
   | 'separated' | 'divorced' | 'widowed';
 
+/**
+ * Self-made ranking from 1 (lowest) to 10 (highest).
+ */
 export type TSelfMadeRank =
   | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
 
+/**
+ * Supported relation target types.
+ */
 export type TRelationType =
   | 'person' | 'organization' | 'place' | 'unknown';
 
