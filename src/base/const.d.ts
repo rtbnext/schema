@@ -44,27 +44,51 @@ export type TSelfMadeRank =
 export type TRelationType =
   | 'person' | 'organization' | 'place' | 'unknown';
 
+/**
+ * Supported asset ownership categories.
+ */
 export type TAssetType =
   | 'public' | 'private' | 'misc';
 
+/**
+ * Supported change indicators for rankings or statistics.
+ */
 export type TChangeFlag =
   | 'up' | 'down' | 'unchanged' | 'new' | 'returned' | 'dropoff' | 'unknown';
 
+/**
+ * Available statistical grouping categories.
+ */
 export type TStatsGroup =
   | 'industry' | 'citizenship';
 
+/**
+ * Supported child count groups.
+ */
 export type TChildrenGroup =
   | 'none' | 'one' | 'two' | 'three' | 'four' | '5-to-10' | 'over-10';
 
-export type TPercentiles =
+/**
+ * Supported percentile values.
+ */
+export type TPercentile =
   | '10th' | '25th' | '50th' | '75th' | '90th' | '95th' | '99th';
 
+/**
+ * Wealth spread factors used for statistical analysis.
+ */
 export type TWealthSpread =
   | '1' | '2' | '5' | '10' | '20' | '50' | '100' | '200' | '500' | '1000';
 
+/**
+ * Supported filter categories.
+ */
 export type TFilterGroup =
   | 'industry' | 'citizenship' | 'country' | 'state' | 'gender'
   | 'age' | 'maritalStatus' | 'special';
 
+/**
+ * Special filter options.
+ */
 export type TFilterSpecial =
   | 'deceased' | 'dropOff' | 'family' | 'selfMade';
