@@ -12,6 +12,9 @@ import type { TChangeFlag, TChildrenGroup, TGender, TIndustry, TMaritalStatus, T
 import type { TMetaData } from '../base/generic';
 
 
+/**
+ * Generic statistical summary.
+ */
 export type TGenericStats = Expand< TChange & {
   date: string;
   count: number;
@@ -20,6 +23,9 @@ export type TGenericStats = Expand< TChange & {
   quota: number;
 } >;
 
+/**
+ * Global statistics data.
+ */
 export type TGlobalStatsData = Expand< TGenericStats & {
   stats: {
     profiles: number;
@@ -27,15 +33,27 @@ export type TGlobalStatsData = Expand< TGenericStats & {
   };
 } >;
 
+/**
+ * Global statistics document.
+ */
 export type TGlobalStats = Expand< TMetaData & TGlobalStatsData >;
 
+/**
+ * Database statistics data.
+ */
 export type TDBStatsData = {
   files: number;
   size: number;
 };
 
+/**
+ * Database statistics document.
+ */
 export type TDBStats = Expand< TMetaData & TDBStatsData >;
 
+/**
+ * Historical statistics entry.
+ */
 export type THistoryItem = [
   date: string,
   count: number,
@@ -46,8 +64,14 @@ export type THistoryItem = [
   percent: number
 ];
 
+/**
+ * Historical statistics.
+ */
 export type THistory = THistoryItem[];
 
+/**
+ * Statistics for a grouped category.
+ */
 export type TStatsGroupItem = Expand< TGenericStats & {
   first: {
     readonly uri: string;
@@ -57,6 +81,11 @@ export type TStatsGroupItem = Expand< TGenericStats & {
   };
 } >;
 
+/**
+ * Grouped statistics.
+ * 
+ * @template T Group identifier type.
+ */
 export type TStatsGroup< T extends string > = {
   index: Expand< TMetaData & {
     items: { [ K in T ]: TStatsGroupItem };
