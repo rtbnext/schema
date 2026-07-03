@@ -1,3 +1,11 @@
+/**
+ * RTBNext Schema V2
+ * List
+ * 
+ * Type definitions for ranking lists, snapshots, list items,
+ * and collection indexes.
+ */
+
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
 import type { TChangeFlag, TGender, TIndustry, TSelfMadeRank } from '../base/const';
