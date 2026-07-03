@@ -1,3 +1,11 @@
+/**
+ * RTBNext Schema V2
+ * Asset Types
+ *
+ * Shared type definitions for assets, net worth, rankings,
+ * performance metrics, and historical financial data.
+ */
+
 import type { Expand } from 'devtypes/types/util';
 import type { TAssetType, TChangeFlag } from './const';
 
