@@ -1,5 +1,6 @@
 /**
- * RTBNext Schema
+ * RTBNext Schema V2
+ * Constants
  * 
  * Shared constant type definitions used throughout the RTBNext schema.
  * These string literal unions define fixed value sets for schema fields
