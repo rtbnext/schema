@@ -1,11 +1,21 @@
 # @rtbnext/schema
 
-**Internal package declaring the database schema.**
+**Shared TypeScript schema definitions for the RTBNext ecosystem.**
 
-This package defines the structure of the profiles and lists, as well as statistics, daily winners/losers (mover), and filtered lists.
+This package provides the complete data model used across [RTBNext](https://github.com/rtbnext), including:
 
-Serves as the core structure of the [@rtbnext API](#), which includes daily net worth data for over 3000 profiles, as well as the [realtimebillionaires.de](https://realtimebillionaires.de) website built thereof.
+- Profile documents
+- Ranking lists and snapshots
+- Statistical data
+- Movers data
+- Filter collections
+- Shared base types and constants
 
-**Copyright © 2026 rtbnext**  
-Created and maintained by Paul Köhler (komed3).  
-Licensed under the MIT License.
+It serves as the foundation for all RTBNext packages and ensures a consistent, strongly typed schema throughout the project.
+
+Used by the official [RTBNext API](https://api.realtimebillionaires.de) and [realtimebillionaires.de](https://realtimebillionaires.de)
+
+
+**Copyright © 2026 RTBNext**  
+Created and maintained by [Paul Köhler](https://komed3.de) (komed3).  
+Licensed under the [MIT License](./LICENSE).
