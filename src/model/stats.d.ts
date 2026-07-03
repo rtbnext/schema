@@ -1,6 +1,6 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
-import type { TChangeFlag, TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentiles, TWealthSpread } from '../base/const';
+import type { TChangeFlag, TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentile, TWealthSpread } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 
@@ -88,7 +88,7 @@ export type TProfileStatsData = {
 export type TProfileStats = Expand< TMetaData & TProfileStatsData >;
 
 export type TWealthStatsData = {
-  percentiles: TStatsList< TPercentiles >;
+  percentiles: TStatsList< TPercentile >;
   quartiles: [ number, number, number ];
   total: number;
   max: number;
