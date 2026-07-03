@@ -1,3 +1,12 @@
+/**
+ * RTBNext Schema V2
+ * Profile
+ * 
+ * Type definitions for profile records representing individuals,
+ * including personal information, financial data, relationships,
+ * media, and historical statistics.
+ */
+
 import type { Expand } from 'devtypes/types/util';
 import type { TAnnual, TAsset, TPerformance, TRanking, TRealtime } from '../base/assets';
 import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
