@@ -1,3 +1,12 @@
+/**
+ * RTBNext Schema V2
+ * Generic Types
+ * 
+ * Shared base type definitions used throughout the RTBNext schema.
+ * These generic building blocks are reused by multiple schema objects
+ * to provide a consistent and extensible data model.
+ */
+
 import type { Expand } from 'devtypes/types/util';
 import type { TRelationType, TSelfMadeRank } from './const';
 
