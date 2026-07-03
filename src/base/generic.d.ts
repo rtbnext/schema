@@ -39,28 +39,43 @@ export type TSnapshot = {
   readonly date: string;
 };
 
+/**
+ * Geographic location.
+ */
 export type TLocation = {
   country: string;
   state?: string;
   city?: string;
 };
 
+/**
+ * Educational background.
+ */
 export type TEducation = {
   school: string;
   degree?: string;
 };
 
+/**
+ * Organization affiliation.
+ */
 export type TOrganization = {
   name: string;
   title?: string;
 };
 
+/**
+ * Self-made classification.
+ */
 export type TSelfMade = {
   type?: string;
   is: boolean;
   rank?: TSelfMadeRank;
 };
 
+/**
+ * Relationship to another entity.
+ */
 export type TRelation = {
   type: TRelationType;
   name: string;
@@ -68,6 +83,9 @@ export type TRelation = {
   uri?: string;
 };
 
+/**
+ * Image metadata.
+ */
 export type TImage = {
   url: string;
   credits: string;
@@ -78,6 +96,9 @@ export type TImage = {
   date?: string;
 };
 
+/**
+ * Wikipedia reference.
+ */
 export type TWiki = {
   uri: string;
   pageId: number;
