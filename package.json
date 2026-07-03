@@ -1,13 +1,30 @@
 {
   "name": "@rtbnext/schema",
-  "description": "Internal package declaring the database schema",
-  "license": "MIT",
+  "description": "Shared TypeScript schema definitions for the RTBNext database",
   "version": "2.0.0-rc.1",
+  "license": "MIT",
   "author": {
     "name": "Paul Köhler (komed3)",
     "email": "webmaster@komed3.de",
     "url": "https://komed3.de"
   },
+  "homepage": "https://github.com/rtbnext",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtbnext/schema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rtbnext/schema/issues"
+  },
+  "keywords": [
+    "rtbnext",
+    "schema",
+    "typescript",
+    "types",
+    "database",
+    "billionaires",
+    "net-worth"
+  ],
   "files": [
     "src",
     "README.md",
