@@ -13,7 +13,7 @@ This package provides the complete data model used across [RTBNext](https://gith
 
 It serves as the foundation for all RTBNext packages and ensures a consistent, strongly typed schema throughout the project.
 
-Used by the official [RTBNext API](https://api.realtimebillionaires.de) and [realtimebillionaires.de](https://realtimebillionaires.de)
+Used by the official [RTBNext API](https://api.realtimebillionaires.de) and [realtimebillionaires.de](https://realtimebillionaires.de).
 
 
 **Copyright © 2026 RTBNext**  
