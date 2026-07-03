@@ -31,7 +31,6 @@ export type TProfileInfo = {
   name: TProfileName;
   gender: TGender;
   birthDate?: string;
-  deathDate?: string;
   birthPlace?: TLocation;
   citizenship?: string;
   residence?: TLocation;
