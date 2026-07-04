@@ -15,6 +15,7 @@ It serves as the foundation for all RTBNext packages and ensures a consistent, s
 
 Used by [realtimebillionaires.de](https://realtimebillionaires.de) and the official [RTBNext API](https://api.realtimebillionaires.de).
 
+----
 
 **Copyright © 2026 RTBNext**  
 Created and maintained by [Paul Köhler](https://komed3.de) (komed3).  
