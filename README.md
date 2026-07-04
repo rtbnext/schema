@@ -2,7 +2,7 @@
 
 **Shared TypeScript schema definitions for the RTBNext ecosystem.**
 
-This package provides the complete data model used across [RTBNext](https://github.com/rtbnext), including:
+This package provides the complete data model used across [RTBNext](https://rtbnext.de), including:
 
 - Profile documents
 - Ranking lists and snapshots
@@ -13,7 +13,7 @@ This package provides the complete data model used across [RTBNext](https://gith
 
 It serves as the foundation for all RTBNext packages and ensures a consistent, strongly typed schema throughout the project.
 
-Used by [realtimebillionaires.de](https://realtimebillionaires.de) and the official [RTBNext API](https://api.realtimebillionaires.de).
+Used by [realtimebillionaires.de](https://realtimebillionaires.de) and the official [RTBNext API](https://api.rtbnext.de).
 
 ----
 
