@@ -32,7 +32,8 @@ export type TListIndex = Map< string, TListIndexItem >;
  * Base list item.
  */
 export type TListItem = {
-  uri: string;
+  uri?: string;
+  sourceUri: string;
   name: string;
   rank: number;
 };
