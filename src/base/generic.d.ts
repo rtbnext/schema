@@ -42,10 +42,10 @@ export type TSnapshot = {
 /**
  * Snapshot index document.
  */
-export type TSnapshotIndex = Expand< TMetaData & {
+export type TSnapshotIndex = {
   latest: string;
   dates: string[];
-} >;
+};
 
 /**
  * Geographic location.
