@@ -23,9 +23,17 @@ export type TProfileIndexItem = Expand< TIndex & {
 } >;
 
 /**
- * Profile search index.
+ * Profile search index document.
  */
-export type TProfileIndex = Map< string, TProfileIndexItem >;
+export type TProfileIndex = Expand< TMetaData & {
+  count: number;
+  items: TProfileIndexItem[];
+} >;
+
+/**
+ * Collection of profile index entries.
+ */
+export type TProfileIndexMap = Map< string, TProfileIndexItem >;
 
 /**
  * Profile status flags.

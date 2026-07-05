@@ -27,6 +27,7 @@ export type TListIndexItem = Expand< TIndex & {
  * List index document.
  */
 export type TListIndex = Expand< TMetaData & {
+  count: number;
   items: TListIndexItem[];
 } >;
 
