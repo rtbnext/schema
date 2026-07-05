@@ -36,23 +36,18 @@ export type TFilter = Expand< TMetaData & TFilterData >;
 /**
  * Special filter lists.
  */
-export type TFilterSpecialList = {
-  deceased: TFilterItem[];
-  dropOff: TFilterItem[];
-  family: TFilterItem[];
-  selfMade: TFilterItem[];
-};
+export type TFilterSpecialList = { [ K in TFilterSpecial ]: TFilterItem[] };
 
 /**
  * Collection of filter lists.
  */
 export type TFilterList = {
-  industry: Record< string, TFilterItem[] >;
+  industry: { [ K in TIndustry ]?: TFilterItem[] };
   citizenship: Record< string, TFilterItem[] >;
   country: Record< string, TFilterItem[] >;
   state: Record< string, TFilterItem[] >;
   gender: { [ K in TGender ]?: TFilterItem[] };
-  age: Record< number, TFilterItem[] >;
+  age: { [ K in TAgeGroup ]?: TFilterItem[] };
   maritalStatus: { [ K in TMaritalStatus ]?: TFilterItem[] };
   special: TFilterSpecialList;
 };
@@ -60,23 +55,18 @@ export type TFilterList = {
 /**
  * Collection of special filter documents.
  */
-export type TFilterSpecialCollection = {
-  deceased: TFilter;
-  dropOff: TFilter;
-  family: TFilter;
-  selfMade: TFilter;
-};
+export type TFilterSpecialCollection = { [ K in TFilterSpecial ]: TFilter };
 
 /**
  * Collection of filter documents.
  */
 export type TFilterCollection = {
-  industry: Record< string, TFilter >;
+  industry: { [ K in TIndustry ]?: TFilter };
   citizenship: Record< string, TFilter >;
   country: Record< string, TFilter >;
   state: Record< string, TFilter >;
   gender: { [ K in TGender ]?: TFilter };
-  age: Record< number, TFilter >;
+  age: { [ K in TAgeGroup ]?: TFilter };
   maritalStatus: { [ K in TMaritalStatus ]?: TFilter };
   special: TFilterSpecialCollection;
 };
