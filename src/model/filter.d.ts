@@ -7,7 +7,7 @@
  */
 
 import type { Expand } from 'devtypes/types/util';
-import type { TGender, TMaritalStatus } from '../base/const';
+import type { TAgeGroup, TFilterSpecial, TGender, TIndustry, TMaritalStatus } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 
@@ -70,3 +70,17 @@ export type TFilterCollection = {
   maritalStatus: { [ K in TMaritalStatus ]?: TFilter };
   special: TFilterSpecialCollection;
 };
+
+/**
+ * Filter index document.
+ */
+export type TFilerIndex = Expand< TMetaData & {
+  industry: TIndustry[];
+  citizenship: string[];
+  country: string[];
+  state: string[];
+  gender: TGender[];
+  age: TAgeGroup[];
+  maritalStatus: TMaritalStatus[];
+  special: TFilterSpecial[];
+} >;
