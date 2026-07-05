@@ -8,7 +8,7 @@
 
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
-import type { TChangeFlag, TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentile, TWealthSpread } from '../base/const';
+import type { TAgeGroup, TChangeFlag, TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentile, TWealthSpread } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 
@@ -113,7 +113,7 @@ export type TStatsList< T extends string > = { [ K in T ]?: number };
  */
 export type TAgePyramidGroup = {
   count: number;
-  decades: TStatsList< string >;
+  decades: TStatsList< TAgeGroup >;
   max: number;
   min: number;
   mean: number;
