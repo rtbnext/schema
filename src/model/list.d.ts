@@ -24,9 +24,16 @@ export type TListIndexItem = Expand< TIndex & {
 } >;
 
 /**
- * List index.
+ * List index document.
  */
-export type TListIndex = Map< string, TListIndexItem >;
+export type TListIndex = Expand< TMetaData & {
+  items: TListIndexItem[];
+} >;
+
+/**
+ * Collection of list index entries.
+ */
+export type TListIndexMap = Map< string, TListIndexItem >;
 
 /**
  * Base list item.
