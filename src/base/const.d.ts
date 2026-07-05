@@ -34,6 +34,12 @@ export type TMaritalStatus =
   | 'separated' | 'divorced' | 'widowed';
 
 /**
+ * Supported age groups.
+ */
+export type TAgeGroup =
+  | '30' | '40' | '50' | '60' | '70' | '80' | '90';
+
+/**
  * Self-made ranking from 1 (lowest) to 10 (highest).
  */
 export type TSelfMadeRank =
