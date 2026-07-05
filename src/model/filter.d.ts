@@ -74,7 +74,7 @@ export type TFilterCollection = {
 /**
  * Filter index document.
  */
-export type TFilerIndex = Expand< TMetaData & {
+export type TFilterIndex = Expand< TMetaData & {
   industry: TIndustry[];
   citizenship: string[];
   country: string[];
