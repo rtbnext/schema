@@ -156,7 +156,7 @@ export type TWealthStatsData = {
   mean: number;
   median: number;
   stdDev: number;
-  decades: TStatsList< string >;
+  decades: TStatsList< TAgeGroup >;
   gender: TStatsList< TGender >;
   spread: TStatsList< TWealthSpread >;
 };
