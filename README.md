@@ -11,9 +11,7 @@ This package provides the complete data model used across [RTBNext](https://rtbn
 - Filter collections
 - Shared base types and constants
 
-It serves as the foundation for all RTBNext packages and ensures a consistent, strongly typed schema throughout the project.
-
-Used by [realtimebillionaires.de](https://realtimebillionaires.de) and the official [RTBNext API](https://api.rtbnext.de).
+It serves as the foundation for all [RTBNext packages](https://npmjs.com/org/rtbnext) and ensures a consistent, strongly typed schema throughout the project.
 
 ----
 
