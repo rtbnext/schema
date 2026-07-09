@@ -1,5 +1,9 @@
 # @rtbnext/schema
 
+[![Static Badge](https://img.shields.io/badge/schema-rtbnext?style=for-the-badge&label=rtbnext)](https://rtbnext.de)
+[![NPM License](https://img.shields.io/npm/l/%40rtbnext%2Fschema?style=for-the-badge)](https://github.com/rtbnext/schema/blob/master/LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/%40rtbnext%2Fschema?style=for-the-badge)](https://npmjs.com/@rtbnext/schema)
+
 **Shared TypeScript schema definitions for the RTBNext ecosystem.**
 
 This package provides the complete data model used across [RTBNext](https://rtbnext.de), including:
