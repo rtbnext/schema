@@ -99,3 +99,9 @@ export type TFilterGroup =
  */
 export type TFilterSpecial =
   | 'deceased' | 'dropOff' | 'family' | 'selfMade';
+
+/**
+ * Supported status flags.
+ */
+export type TStatusFlag =
+  | 'healthy'	| 'degraded' | 'maintenance' | 'outage' | 'unknown';
