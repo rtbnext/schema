@@ -104,7 +104,7 @@ export type TFilterSpecial =
  * Supported service types.
  */
 export type TService =
-  | 'profiles' | 'lists' | 'movers' | 'filters' | 'statistics';
+  | 'profile' | 'list' | 'mover' | 'filter' | 'stats' | 'system';
 
 /**
  * Supported status flags.
