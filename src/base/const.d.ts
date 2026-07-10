@@ -101,6 +101,12 @@ export type TFilterSpecial =
   | 'deceased' | 'dropOff' | 'family' | 'selfMade';
 
 /**
+ * Supported service types.
+ */
+export type TService =
+  | 'profiles' | 'lists' | 'movers' | 'filters' | 'statistics';
+
+/**
  * Supported status flags.
  */
 export type TStatusFlag =

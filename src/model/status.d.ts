@@ -9,7 +9,7 @@
  */
 
 import type { Expand } from 'devtypes/types/util';
-import type { TStatusFlag } from '../base/const';
+import type { TService, TStatusFlag } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 /**
@@ -17,5 +17,5 @@ import type { TMetaData } from '../base/generic';
  */
 export type TStatus = Expand< TMetaData & {
   status: TStatusFlag;
-  services: { [ K in ( 'profiles' | 'lists' | 'movers' | 'filters' | 'statistics' ) ]: TStatusFlag };
+  services: { [ S in TService ]: TStatusFlag };
 } >;
