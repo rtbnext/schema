@@ -19,6 +19,7 @@ import type { TRelationType, TSelfMadeRank } from './const';
 export type TMetaData< T extends Record< string, unknown > = {} > = {
   $metadata: Expand< {
     schemaVersion: 2;
+    generator: 'rtbnext/2.1.0';
     lastModified: string;
   } & T >;
 };
