@@ -111,3 +111,9 @@ export type TService =
  */
 export type TStatusFlag =
   | 'healthy'	| 'degraded' | 'maintenance' | 'outage' | 'unknown';
+
+/**
+ * Supported profile status flags.
+ */
+export type TProfileStatusFlag =
+  | 'healthy' | 'invalid' | 'missing' | 'unknown';
