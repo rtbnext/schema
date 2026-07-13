@@ -9,7 +9,7 @@
 
 import type { Expand } from 'devtypes/types/util';
 import type { TAnnual, TAsset, TPerformance, TRanking, TRealtime } from '../base/assets';
-import type { TGender, TIndustry, TMaritalStatus } from '../base/const';
+import type { TGender, TIndustry, TMaritalStatus, TProfileStatusFlag } from '../base/const';
 import type { TEducation, TImage, TIndex, TLocation, TMetaData, TOrganization, TRelation, TSelfMade, TWiki } from '../base/generic';
 
 
@@ -120,10 +120,19 @@ export type TProfileHistoryItem = [
 export type TProfileHistory = TProfileHistoryItem[];
 
 /**
+ * Profile status information.
+ */
+export type TProfileStatus = {
+  state: TProfileStatusFlag;
+  flags?: string[];
+};
+
+/**
  * Profile document metadata.
  */
 export type TProfileMetaData = TMetaData< {
   lastLookup?: string;
+  status?: TProfileStatus;
 } >;
 
 /**
