@@ -1,7 +1,7 @@
 {
   "name": "@rtbnext/schema",
   "description": "Shared TypeScript schema definitions for the RTBNext database",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "license": "MIT",
   "author": {
     "name": "Paul Köhler (komed3)",
