@@ -23,6 +23,7 @@ export type TSearchIndexItem = {
   family: boolean;
   dropOff: boolean;
   embargo: boolean;
+  searchName: string;
   fullName: string;
   lastName: string;
   gender?: TGender;
