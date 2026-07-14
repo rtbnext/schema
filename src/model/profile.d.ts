@@ -123,7 +123,8 @@ export type TProfileHistory = TProfileHistoryItem[];
  * Profile status information.
  */
 export type TProfileStatus = {
-  state: TProfileStatusFlag;
+  status: TProfileStatusFlag;
+  score: number;
   flags?: string[];
 };
 
