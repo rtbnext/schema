@@ -9,7 +9,7 @@
 
 import type { Expand } from 'devtypes/types/util';
 
-import type { TGender, TIndustry, TMaritalStatus, TProfileStatusFlag } from '../base/const';
+import type { TGender, TIndustry, TMaritalStatus, TProfileStatusFlag, TSelfMadeRank } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 
@@ -40,10 +40,10 @@ export type TSearchIndexItem = {
   children?: number;
   philanthropyScore?: number;
   selfMade?: boolean;
-  selfMadeRank?: number;
+  selfMadeRank?: TSelfMadeRank;
   wikidata?: string;
-  status: TProfileStatusFlag;
-  score: number;
+  status?: TProfileStatusFlag;
+  score?: number;
   timestamp: string;
 };
 
