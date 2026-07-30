@@ -8,7 +8,7 @@
 
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
-import type { TAgeGroup, TChangeFlag, TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentile, TWealthSpread } from '../base/const';
+import type { TAgeGroup, TChangeFlag, TChildrenGroup, TGender, TIndustry, TMaritalStatus, TPercentile, TSelfMadeRank, TWealthSpread } from '../base/const';
 import type { TMetaData } from '../base/generic';
 
 
@@ -135,7 +135,7 @@ export type TProfileStatsData = {
     full: TStatsList< string >;
     short: TStatsList< TChildrenGroup >;
   };
-  selfMade: TStatsList< string >;
+  selfMade: TStatsList< TSelfMadeRank >;
   philanthropyScore: TStatsList< string >;
 };
 
