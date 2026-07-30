@@ -110,7 +110,7 @@ export type TService =
  * Supported status flags.
  */
 export type TStatusFlag =
-  | 'healthy'	| 'degraded' | 'maintenance' | 'outage' | 'unknown';
+  | 'healthy' | 'degraded' | 'maintenance' | 'outage' | 'unknown';
 
 /**
  * Supported profile status flags.
