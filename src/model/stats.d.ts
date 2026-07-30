@@ -195,6 +195,7 @@ export type TScatter = Expand< TMetaData & TScatterData >;
  */
 export type TTop10Item = {
   readonly uri: string;
+  name: string;
   rank: number;
   networth: number;
   flag: TChangeFlag;
