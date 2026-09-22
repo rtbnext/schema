@@ -102,7 +102,15 @@ export type TPersonListItem = Expand< TListItem & {
 /**
  * RTB ranking entry.
  */
-export type TRTBListItem = Expand< TPersonListItem & TChange & {
+export type TRTBListItem = Expand< TListItem & TChange & {
+  networth: number;
+  industry: TIndustry;
+  source: string[];
+  gender?: TGender;
+  age?: number;
+  citizenship?: string;
+  selfMadeRank?: TSelfMadeRank;
+  philanthropyScore?: number;
   flag: TChangeFlag;
   rankDiff?: number;
 } >;
