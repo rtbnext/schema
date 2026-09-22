@@ -17,8 +17,8 @@ import type { TGenericStats } from './stats';
  * List index entry.
  */
 export type TListIndexItem = Expand< TIndex & {
-  shortName: string;
-  desc: string;
+  shortName?: string;
+  desc?: string;
   columns: string[];
   filters: string[];
 } >;
