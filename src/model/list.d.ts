@@ -111,8 +111,3 @@ export type TRTBListItem = Expand< TPersonListItem & TChange & {
  * RTB ranking snapshot document.
  */
 export type TRTBListSnapshot = TListSnapshot< TRTBListItem >;
-
-/**
- * Billionaires ranking entry.
- */
-export type TBillionairesListItem = TPersonListItem;
