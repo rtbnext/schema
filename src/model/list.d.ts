@@ -82,6 +82,7 @@ export type TListCollection = {
  * Base person ranking entry.
  */
 export type TPersonListItem = Expand< TListItem & {
+  rank?: number;
   networth?: number;
   industry?: TIndustry;
   source?: string[];
@@ -102,6 +103,7 @@ export type TPersonListItem = Expand< TListItem & {
  * RTB ranking entry.
  */
 export type TRTBListItem = Expand< TListItem & TChange & {
+  rank: number;
   networth: number;
   industry: TIndustry;
   source: string[];
