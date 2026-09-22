@@ -43,7 +43,6 @@ export type TListItem = {
   uri?: string;
   sourceUri: string;
   name: string;
-  rank: number;
 };
 
 /**
