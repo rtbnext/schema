@@ -9,7 +9,7 @@
 import type { Expand } from 'devtypes/types/util';
 import type { TChange } from '../base/assets';
 import type { TChangeFlag, TGender, TIndustry, TSelfMadeRank } from '../base/const';
-import type { TIndex, TMetaData, TSnapshot } from '../base/generic';
+import type { TIndex, TLocation, TMetaData, TOrganization, TSnapshot } from '../base/generic';
 import type { TGenericStats } from './stats';
 
 
@@ -89,6 +89,14 @@ export type TPersonListItem = Expand< TListItem & {
   gender?: TGender;
   age?: number;
   citizenship?: string;
+  place?: Partial< TLocation >;
+  organization?: TOrganization;
+  selfMadeRank?: TSelfMadeRank;
+  philanthropyScore?: number;
+  flags?: {
+    family?: boolean;
+    embargo?: boolean;
+  };
 } >;
 
 /**
@@ -107,12 +115,4 @@ export type TRTBListSnapshot = TListSnapshot< TRTBListItem >;
 /**
  * Billionaires ranking entry.
  */
-export type TBillionairesListItem = Expand< TPersonListItem & {
-  selfMadeRank?: TSelfMadeRank;
-  philanthropyScore?: number;
-} >;
-
-/**
- * Forbes 400 ranking entry.
- */
-export type T400ListItem = TBillionairesListItem;
+export type TBillionairesListItem = TPersonListItem;
