@@ -83,9 +83,9 @@ export type TListCollection = {
  * Base person ranking entry.
  */
 export type TPersonListItem = Expand< TListItem & {
-  networth: number;
-  industry: TIndustry;
-  source: string[];
+  networth?: number;
+  industry?: TIndustry;
+  source?: string[];
   gender?: TGender;
   age?: number;
   citizenship?: string;
